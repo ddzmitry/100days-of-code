@@ -1,0 +1,263 @@
+<!-- First  day hundred days of cooding! -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Trivia Game</title>
+    <!-- bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+    <style>
+     .answers {
+
+      background-color: #B9B4B4;
+      width: 200px;
+      height: 150px;
+      margin: 10px;
+      text-align: center;
+      padding: 50px;
+     }
+     .question {
+      padding: 25px;
+       background-color: #EA6767;
+      width: 400px;
+      height: 150px;
+      margin: 45px;
+      text-align: center;
+     }
+
+     body{
+      width: 960px;
+      margin: 0 auto 0 auto;
+      background-image: url('https://i.vimeocdn.com/video/521490008_960.jpg');
+      overflow-x: hidden;
+     }
+
+     #imageHolder1 {
+
+          
+     }
+     p{
+      color: white;
+      margin: 10px;
+      font-size: 23px;
+     }
+     img{
+      width: 400px;
+      height: 300px;
+
+     }
+     .timeFix{
+
+      color: white;
+      margin: 10px;
+      font-size: 25px;
+     }
+    </style>
+
+  </head>
+  
+ <body onload="AjaxStart() " >
+   
+
+
+    
+    
+    <div class="container">
+
+                                      <div class="row ">
+                                      <div class=" col-md-2"> <p> Correct: <span id="correct">  </span></p>
+                                                              <p> Wrong: <span id="wrong">  </span> </p>
+                                                              <p> Unanswerd: <span id="unanswerd"> </span>  </p>
+                                      </div>
+                                      <div id="question" class="question col-md-8 "></div>
+                                      <div class=" timeFix col-md-2">Timer: <span class="timer" id="timer"></span></div>
+                                      </div>
+              <div class="row  ">
+
+                        <div style="cursor: pointer;" id="a1" class="  answers col-md-4 col-sm-4 col-lg-4"></div> 
+                        <div style="cursor: pointer;" id="a2" class="  answers col-md-4 col-sm-4 col-lg-4"></div>
+                        <div style="cursor: pointer;" id="a3" class="  answers col-md-4 col-sm-4 col-lg-4"></div>
+                        <div style="cursor: pointer;" id="a4" class="  answers col-md-4 col-sm-4 col-lg-4"></div> 
+           
+              </div>    <!-- End Answers Row -->  
+            <div class="row"></div>
+            <div  class="col-md-2 col-sm-2 col-lg-2"></div>
+            <div  class="col-md-6 col-sm-6 col-lg-6" id="imageHolder1"></div>
+            <div  class="col-md-2 col-sm-2 col-lg-2"> </div>
+
+</div>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  
+<script>
+
+
+function addFunction (q) {
+  // body... 
+
+  
+    var queryURL = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag='+q;
+   
+    
+
+    $.ajax({
+      url: queryURL,
+      method: 'GET'
+    }).done(function(response) {
+      console.log(response);
+      console.log(response.data.image_url);
+
+
+            
+            document.getElementById('imageHolder1').innerHTML="<a href='#'><img src= '" +  response.data.image_url + "' border=0/></a>";
+    });
+
+}
+
+document.getElementById("a1").addEventListener("click", answerCommit);
+document.getElementById("a2").addEventListener("click", answerCommit);
+document.getElementById("a3").addEventListener("click", answerCommit);
+document.getElementById("a4").addEventListener("click", answerCommit);
+
+
+
+function answerCommit() {
+
+//checking answer
+
+if (this.dataset.answerdata === questionUse.correct_answer) {
+
+  this.dataset.answerdata === q ;
+  addFunction(q)
+  this.style.backgroundColor = "#4DC247"
+  correct++
+  console.log('Good Answer! ')
+    window.setTimeout(AjaxStart, 2000);
+    var q = this.dataset.answerdata ;
+  addFunction(q)   
+
+  
+} else {
+  q = questionUse.correct_answer;
+  addFunction (q)
+  this.style.backgroundColor = "#ED3030"
+  wrong++
+    console.log('Wrong ')
+    window.setTimeout(AjaxStart, 2000);
+};
+
+}
+//varriables
+var targetURLA = 'https://opentdb.com/api.php?amount=50&category=17&type=multiple';
+var time = 30;
+var correct = 0;
+var wrong = 0;
+var unanswerd = 0;
+var answers = []
+var questionList = [];
+var rand;
+var questionUse;
+var interval = window.setInterval(timer, 1000);
+function checkQ (questionList) {
+  //random question from questions array
+rand = Math.round(Math.random() * questionList.length) ;
+
+questionUse = questionList[rand]
+                                  // console.log(questionUse)
+                                  // console.log(questionUse.correct_answer)
+                                  // console.log(questionUse.incorrect_answers)
+//correct answers and wrong all set in one array
+answers = questionUse.incorrect_answers
+answers.push(questionUse.correct_answer)
+                                  // console.log(answers)
+
+function shuffle(answers) {
+          var m = answers.length,
+            t, i;
+
+          // While there remain elements to shuffle…
+          while (m) {
+
+            // Pick a remaining element…
+            i = Math.floor(Math.random() * m--);
+
+            // And swap it with the current element.
+            t = answers[m];
+            answers[m] = answers[i];
+            answers[i] = t;
+          }
+
+          return answers;
+          console.log(answers)
+        }
+//to shufflie answers in array
+shuffle(answers)
+
+document.getElementById('question').innerHTML = questionUse.question;
+document.getElementById('a1').innerHTML = answers[0];
+document.getElementById('a2').innerHTML = answers[1];
+document.getElementById('a3').innerHTML = answers[2];
+document.getElementById('a4').innerHTML = answers[3];
+document.getElementById('a1').dataset.answerdata = answers[0]; 
+document.getElementById('a2').dataset.answerdata = answers[1]; 
+document.getElementById('a3').dataset.answerdata = answers[2];
+document.getElementById('a4').dataset.answerdata = answers[3]; 
+document.getElementById("timer").innerHTML = time; 
+document.getElementById('correct').innerHTML = correct; 
+document.getElementById('wrong').innerHTML = wrong;
+document.getElementById('unanswerd').innerHTML = unanswerd ;
+
+}
+
+function timer () {
+document.getElementById("timer").innerHTML = time;
+time--;
+console.log(time)
+
+if (time == 0) {
+  unanswerd++;
+  q = questionUse.correct_answer;
+  addFunction (q)
+  AjaxStart ()
+
+};
+}
+
+window.setInterval(timer, 1000);
+
+//ajax call
+function AjaxStart () {
+document.getElementById('a1').style.backgroundColor = "#B9B4B4" 
+document.getElementById('a2').style.backgroundColor = "#B9B4B4" 
+document.getElementById('a3').style.backgroundColor = "#B9B4B4"
+document.getElementById('a4').style.backgroundColor = "#B9B4B4" 
+
+  time = 30;
+  $.ajax({
+      url: targetURLA
+    })
+    .done(function(data, key) {
+      for (i in data.results) {
+        var question = data.results[i]
+        
+        questionList.push(question);
+
+      
+      }
+      checkQ(questionList)
+    })
+  }     
+     
+  
+</script>
+
+</body>
+</html>
