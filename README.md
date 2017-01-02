@@ -5,6 +5,7 @@ Day 1
 <li> 1.Learned AJAX</li>
 <li> 2.JSON</li>
 <li> 3.More JS</li>
+<li> 4.No JQuery</li>
 </ul>
 
 
