@@ -1,4 +1,4 @@
-# 100days-of-code
+<h2>I've joined the #100DaysOfCode Challenge.</h2>
 100-days-of-code Self Challange!
 Day 1 
 <ul>Created Double API Trivia game :
