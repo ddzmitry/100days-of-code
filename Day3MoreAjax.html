@@ -1,0 +1,128 @@
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Document</title>
+ 	<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <style>
+  	img {
+  		height: 150px;
+  		width: 100px;
+  		padding: 5px;
+  	}
+  </style>
+ </head>
+ <body>
+         <input type='text' id='search-for'>
+         <button type='button'  id='search-button'>Search</button>
+  		 <button type='button' id='clear'>Clear Page</button>
+		<section id="2016"> <h3> Pictures was in 2016 on your topic </h3></section>
+ 		<section id="2015"> <h4> Pictures was in 2015 on your topic </h4></section>
+ 		<section id="2014"> <h5> Pictures was in 2014 on your topic </h5></section>
+	
+ 	<script>
+
+ 	var clearSections = document.getElementById("clear") // clear 
+ 	var images = document.getElementsByTagName('img'); //  all images
+ 	var search = document.getElementById("search-button"); // search button
+ 				var box = document.getElementById("search-for")
+ 				var searchItem;
+ 					clearSections.onclick = function() { 
+ 																//while there is more then 0 images will delete
+ 							while(images.length > 0) {
+    						images[0].parentNode.removeChild(images[0]);
+														}
+
+ 					}
+
+
+ 				
+ 	        search.onclick = function() { //fire main function
+ 	        		box.value = box.value.replace(" " , "+")
+ 	        	 	searchItem = box.value
+        			addFunction(searchItem)
+        	
+         
+        }
+
+ 		
+
+ 		function addFunction (searchItem) { //looking for pictures
+  
+    var queryURL = "http://api.giphy.com/v1/gifs/search?q="+searchItem+"/&api_key=dc6zaTOxFJmzC&limit=100";
+   
+    var pictures = [];
+   	var links = []
+    $.ajax({
+      url: queryURL,
+      method: 'GET'
+    }).done(function(response) {
+
+    	for ( i in  response.data) {
+      // console.log(response.data[i].import_datetime);
+
+      		pictures.push(response.data[i])
+      			console.log(pictures)
+      		
+
+      }
+      // console.log(pictures);   
+      		var picturesOf2016 = pictures.filter(function(pictures) {  //filtering for pictures for 2016 
+      	return pictures.import_datetime.includes('2016')
+      });
+            var picturesOf2015 = pictures.filter(function(pictures) {  //filtering for pictures for 2015
+      	return pictures.import_datetime.includes('2015')
+      });
+
+             var picturesOf2014 = pictures.filter(function(pictures) {  //filtering for pictures for 2014
+      	return pictures.import_datetime.includes('2014')
+      });
+             console.log(picturesOf2014)
+
+      // console.log(picturesOf2016)
+      // console.log(picturesOf2015)
+      // console.log(picturesOf2014)
+                                          
+                                          // placing pictures in sections
+
+   					for ( j in picturesOf2016 ) {
+
+   						console.log(picturesOf2016[j].images.original.url)
+   						var img = document.createElement('img')
+   							img.src = picturesOf2016[j].images.original.url
+   						document.getElementById("2016").appendChild(img)
+   						
+
+   					}
+   					   					for ( a in picturesOf2015 ) {
+
+   						console.log(picturesOf2015[a].images.original.url)
+   						var img = document.createElement('img')
+   							img.src = picturesOf2016[a].images.original.url
+   						document.getElementById("2015").appendChild(img)
+   						
+
+   					}
+   					   					for ( c in picturesOf2014 ) {
+
+   						console.log(picturesOf2014[c].images.original.url)
+   						var img = document.createElement('img')
+   							img.src = picturesOf2016[c].images.original.url
+   						document.getElementById("2014").appendChild(img)
+   						
+   					}
+            
+    });
+
+}
+
+
+ 	</script>
+
+ </body>
+ </html>

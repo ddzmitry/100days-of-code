@@ -22,3 +22,13 @@ I've joined the #100DaysOfCode Challenge.
 <li>4.No JQuery</li>
 
 </ul>
+
+<h2>Day 3 </h2>
+
+<ul> :More API and Beginning to learn ES 6
+<li>1.Used filter function </li>
+<li>2.Started Learning ES 6 JS</li>
+<li>3.More Vanilla JS</li>
+<li>4. <bold> I will a badass soon</bold> !</li>
+
+</ul>
