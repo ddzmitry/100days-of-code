@@ -32,3 +32,13 @@ I've joined the #100DaysOfCode Challenge.
 <li>4. <bold> I will a badass soon</bold> !</li>
 
 </ul>
+
+
+<h2>Day 43 </h2>
+
+<ul> :Request Node http method
+<li>1.Started on learnig Some node </li>
+<li>2.Keep Learning ES 6 JS</li>
+<li>3.Lynda Node.js course </li>
+
+</ul>
