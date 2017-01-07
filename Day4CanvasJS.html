@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	
+	</title>
+</head>
+<body>
+
+<p>W, A, S, D keys to move</p>
+
+<section style="border-style: solid; border-width: 2px; width: 500px;">
+
+	<canvas width="500" height="400" id="canvas" tabindex="0">
+		Canvas tag not supported
+	</canvas>
+
+</section>
+
+<script type="text/javascript">
+	//coordinates of rectangle starting position away from origin
+	var clearCanvas2 = false;
+	var x = 100;
+	var y = 100;
+	var x1 = Math.floor(Math.random() * 400);
+	var y1 = Math.floor(Math.random() * 300 );
+		console.log(`Val x is ${x1}`)
+		console.log(`Val x is ${y1}`)
+	var canvas = document.querySelector("#canvas");
+	canvas.addEventListener('keydown', doKeyDown, true);
+
+	canvas_context = canvas.getContext("2d");
+	canvas_context.fillRect(100, 100, 50, 30);
+	canvas_context.fillRect(x1, y1, 50, 30)
+
+	function clearCanvas() {
+		canvas.width = canvas.width;
+		canvas_context.fillRect(x1, y1, 50, 30)
+		
+	};
+
+		function clearCanvas2() {
+		canvas.width = canvas.width;
+			
+		canvas_context.clearRect(0, 0, canvas.width, canvas.height);
+	};
+
+
+
+	function gameOver(){
+
+
+		if (x == Math.round(x1) &&  y== Math.round(y1) ){
+
+
+alert("Game Over");
+canvas_context.beginPath();
+canvas_context.arc(100, 100, 50, 0.25 * Math.PI, 1.25 * Math.PI, false);
+canvas_context.fillStyle = "rgb(255, 255, 0)";
+canvas_context.fill();
+canvas_context.beginPath();
+canvas_context.arc(100, 100, 50, 0.75 * Math.PI, 1.75 * Math.PI, false);
+canvas_context.fill();
+canvas_context.beginPath();
+canvas_context.arc(100, 75, 10, 0, 2 * Math.PI, false);
+canvas_context.fillStyle = "rgb(0, 0, 0)";
+canvas_context.fill();
+					
+
+		canvas_context.font = "30px Comic Sans MS";
+		canvas_context.textAlign = "center";
+		canvas_context.fillText("You win", canvas.width/2, canvas.height/2);
+			
+			
+		} 
+
+
+	};
+
+	function doKeyDown(e){
+
+		//====================
+		//	THE W KEY
+		//====================
+		if (e.keyCode == 87) {
+
+			clearCanvas();
+			y = y - 1;
+			console.log(`Val x is ${x1}`)
+		console.log(`Val x is ${y1}`)
+			canvas_context.fillRect(x, y, 50, 30);
+		}
+
+		//====================
+		//	THE S KEY
+		//====================
+		if (e.keyCode == 83) {
+			clearCanvas();
+			y = y + 1;
+			gameOver()
+			console.log(`Val x is ${x1}`)
+		console.log(`Val x is ${y1}`)
+			canvas_context.fillRect(x, y, 50, 30);
+		}
+
+		//====================
+		//	THE A KEY
+		//====================
+		if (e.keyCode == 65) {
+			clearCanvas();
+			x = x - 1;
+			gameOver()
+			console.log(`Val x is ${x1}`)
+		console.log(`Val x is ${y1}`)
+			canvas_context.fillRect(x, y, 50, 30);
+		}
+
+		//====================
+		//	THE D KEY
+		//====================
+		if (e.keyCode == 68) {
+			clearCanvas();
+			x = x + 1;
+			gameOver()
+			console.log(`Val x is ${x1}`)
+		console.log(`Val x is ${y1}`)
+			canvas_context.fillRect(x, y, 50, 30);
+		}
+
+	}
+</script>
+</body>
+</html>

@@ -35,3 +35,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>4.Hello WorldS!</li>
 	<li>5.Using NODEMON is pretty handy! </li>
 </ul>
+
+<h2>Day 6  </h2>
+<ul> Learning how to work with Canvas
+	<li>1.Programming var's for canvas</li>
+	<li>2.Learning 2D model </li>
+	<li>3.First group fast pace project</li>
+</ul>
