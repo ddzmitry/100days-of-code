@@ -42,3 +42,11 @@ I've joined the #100DaysOfCode Challenge.
 	<li>2.Learning 2D model </li>
 	<li>3.First group fast pace project</li>
 </ul>
+
+
+<h2>Day 7  </h2>
+<ul> Working with JSON object
+	<li>1.Using different types of attr</li>
+	<li>2.Deeply going into classes and data with Jquery </li>
+	<li>3.Changing sources inside of the <img> </li>
+</ul>

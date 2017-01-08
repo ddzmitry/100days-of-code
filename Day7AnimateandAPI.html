@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<link rel="stylesheet" type="text/css" src="assets/css/styles">		
+<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>	
+<script  type="text/javascript">
+	
+$('body').html(`
+	<input type='text' id='search-for'>
+    <button type='button'  id='search-button'>Search</button>
+  	<button type='button' id='clear'>Clear Page</button>
+  	<div id='searchButtons'></div>
+  	<section id='frame'><section>`);
+
+var subject = ["Cats", "People"];
+var searchItem = $('#search-for');
+var tempBoolean = false;
+var lookingFor;
+var randomPicturesIndexes = []; // for fun!
+var randomIndex;
+addDefault();
+
+// $(".infoPic").on('click', function() {
+// 	console.log("I was clicked")
+// 	console.log($(this).data('name'));
+
+// 	responsiveVoice.speak(`You picked category of  ${$(this).data('name')}`);
+
+// });
+
+$(document).on("click", ".infoPic", function() {
+
+	randomPicturesIndexes = [];
+	responsiveVoice.speak(`Ten pictures of ${$(this).data('name')}?`);
+	// console.log($(this).data('name'));
+	lookingFor = $(this).data('name');
+	// console.log(lookingFor)
+	showMePictures(lookingFor);
+});
+
+$(document).on("click", ".notMoving", function() {
+	// console.log(this.src);
+	// console.log($(this).data('id'));
+	this.src = `https://media4.giphy.com/media/${$(this).data('id')}/giphy.gif`;
+	$(this).removeClass('notMoving');
+	$(this).addClass('moving');
+
+});
+
+$(document).on("click", ".moving", function() {
+	// console.log(this.src);
+	// console.log($(this).data('id'));
+	this.src = `https://media4.giphy.com/media/${$(this).data('id')}/giphy_s.gif`;
+	$(this).removeClass('moving');
+	$(this).addClass('notMoving');
+
+});
+
+function showMePictures(lookingFor) {
+
+	//http://media4.giphy.com/media/i62cyh50Oh3aM/giphy_s.gif		
+	//https://media4.giphy.com/media/bYI4evfBRimKA/giphy.gif
+	// .data.images.original
+	// .data.images.original_still
+
+
+	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + lookingFor + "/&api_key=dc6zaTOxFJmzC&limit=100";
+
+	var pictures = [];
+	var links = []
+	$.ajax({
+		url: queryURL,
+		method: 'GET'
+	}).done(function(response) {
+
+		console.log(response.data.length);
+do {
+			randomIndex = Math.floor(Math.random() * response.data.length);
+			console.log(randomIndex);
+			randomPicturesIndexes.push(randomIndex);
+			console.log(randomPicturesIndexes);
+		} while (randomPicturesIndexes.length < 10);
+
+
+						for( p in randomPicturesIndexes) {
+
+								// console.log(randomPicturesIndexes[p])
+							var bufferIndex = randomPicturesIndexes[p];	
+							// console.log(response.data[bufferIndex]);
+							// console.log(response.data[bufferIndex].id);
+							console.log(`${response.data[bufferIndex].images.original_still.url}`)
+							$('#frame').append(`<img class="notMoving" src="${response.data[bufferIndex].images.original_still.url}" data-id="${response.data[bufferIndex].id}" height="150" width="150""> `)				
+
+						// 	console.log(response.data[p].images.original_still.url);
+						// 	console.log(response.data[p].images.original.url);
+						}
+
+
+
+
+	});
+
+}
+
+
+
+function addDefault() {
+
+	for (i in subject) {
+		console.log(subject[i]);
+		$('#searchButtons').append(`<button class="infoPic" data-name = ${subject[i]} > ${subject[i]} </button>`);
+	};
+
+}
+
+function addTheButton() {
+
+	console.log(searchItem.val());
+	console.log(subject);
+
+	$('#searchButtons').append(`<button class="infoPic" data-name = ${searchItem.val()} > ${searchItem.val()} </button>`);
+	responsiveVoice.speak(`Adding Category of: ${searchItem.val()}`);
+
+
+}
+$("#search-button").on('click', function() {
+
+	for (i in subject) {
+		tempBoolean = true;
+		if ((searchItem.val().toLowerCase() === subject[i].toLowerCase()) || ((searchItem.val().toLowerCase() === ''))) {
+
+			return responsiveVoice.speak(`Category exists or undefined`);
+
+		} else {
+			tempBoolean = false;
+
+		}
+	}
+	if (tempBoolean == false) {
+		subject.push(searchItem.val());
+		console.log(subject);
+		addTheButton();
+	}
+
+});
+
+
+$("#clear").on('click', function() {
+	responsiveVoice.speak(`Oh no!!`);
+});
+
+
+	
+</script>
+</body>
+</html>
