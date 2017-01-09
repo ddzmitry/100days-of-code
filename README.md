@@ -50,3 +50,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>2.Deeply going into classes and data with Jquery </li>
 	<li>3.Changing sources inside of the <img> </li>
 </ul>
+
+<h2>Day 8 </h2>
+<ul> Finished with API project
+	<li>1.Research the way of excluding bad words fron context (lol)</li>
+	<li>2.Boolean usability is amazing </li>
+	<li>3.ready project at: https://radiant-springs-13781.herokuapp.com/  <img> </li>
+</ul>
