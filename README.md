@@ -57,3 +57,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>2.Boolean usability is amazing </li>
 	<li>3.ready project at: https://radiant-springs-13781.herokuapp.com/  <img> </li>
 </ul>
+
+<h2>Day 9 </h2>
+<ul> Small Jquery group project
+	<li>1.Looping through array with assign number</li>
+	<li>2.More abilities with API's</li>
+	<li>3.Working more on Node.js , more projects soon! <img> </li>
+</ul>

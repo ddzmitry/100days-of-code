@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		.form-control {
+			width: 300px;
+			margin: 15px;
+		};
+
+		div {
+
+			width: 350px;
+			font-size: 35px;
+		};
+		h3 {
+			background-color: #EF8888;
+			opacity: 0.8;
+		}
+		h3:hover{
+
+				opacity: 1;
+		}
+	</style>
+</head>
+<body class="text-center">
+	
+<input class = "input form-control" required placeholder="Name of the person" type='text'  id='search-for'>
+<input class = "input form-control" required placeholder="begin date of the articke YYYYMMDD " type='text'  id='startDate'>
+<input class = "input form-control"  required placeholder="end date of the articke YYYYMMDD " type='text'  id='endDate'>
+<!-- <input class = "input form-control" required placeholder="newest/oldest?" type='text'  id='OldNew'> -->
+<input class = "input form-control"  type="number" min="1" max="10"  required placeholder="How many results you need? max 10" type='text'  id='theAmount'>
+			<button class="search"> Search</button> <button class="clear"> Clear </button>
+<section id="info" ></section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>
+		
+
+	var searchItem = $('#search-for')
+	var dateBegin = $('#startDate')
+	var dateEnd = $('#endDate')
+	var NewOld	= $('#OldNew')
+    var Amount = $('#theAmount') 
+
+    $(".clear").on('click', function(event) {
+
+    		$("#info").empty()
+    });
+
+
+
+$(".search").on('click', function(event) {
+	console.log(searchItem.val());
+	console.log(dateBegin.val());
+	console.log(dateEnd.val());
+	console.log(NewOld.val());
+
+	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+url += '?' + $.param({
+  'api-key': "3e80502c0f1c44dc90a613e8c9980e02",
+  'q': searchItem.val(),
+  'begin_date': dateBegin.val(),
+  'end_date': dateEnd.val(),
+  // 'sort': NewOld.val(),
+  'page': Amount.val()
+});
+$.ajax({
+  url: url,
+  method: 'GET',
+}).done(function(result) {
+
+	var globalArray = result.response.docs; 
+
+						for( var i = 0 ; i <= Amount.val() ; i++ ) {
+					console.log(globalArray[i])		
+					console.log(globalArray[i].pub_date)
+					console.log(globalArray[i].snippet)
+					console.log(globalArray[i].web_url)
+					console.log(globalArray[i].type_of_material)
+					// console.log(globalArray[i].multimedia[1].url)
+
+
+							$('section').prepend(`
+											
+							<div id="article ${i}">	
+
+
+
+									
+									<h3>Quote: ${globalArray[i].snippet}</h2>
+									<h4>Type of material: ${globalArray[i].type_of_material}</h4>		
+									<h6>Published date: ${globalArray[i].pub_date}</h3>
+								
+									<h5><a href="${globalArray[i].web_url}">Article Link</a> </h2>
+								
+
+										</div>
+								`)
+
+
+
+
+
+
+
+
+					}
+
+}).fail(function(err) {
+  throw err;
+});
+
+});
+
+// publick date .pub_date
+//  quote .snippet
+// url  .web_url 
+// type of matherial .type_of_material
+// .multimedia["0"].url
+	</script>
+</body>
+</html>
