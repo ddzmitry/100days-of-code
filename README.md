@@ -64,3 +64,11 @@ I've joined the #100DaysOfCode Challenge.
 	<li>2.More abilities with API's</li>
 	<li>3.Working more on Node.js , more projects soon! <img> </li>
 </ul>
+
+<h2>Day 10 </h2>
+<ul> Finished My first Lynda course on Node.js
+	<li>1. Deploying some snippets from projects!</li>
+	<li>2.Grunt is amazing! Node-dev! Browserify etc...</li>
+	<li>3. More anfd more Node!   <img> </li>
+	<li>4. A lot of experience working with npm <img> </li>
+</ul>
