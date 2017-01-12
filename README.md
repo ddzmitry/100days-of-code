@@ -72,3 +72,11 @@ I've joined the #100DaysOfCode Challenge.
 	<li>3. More anfd more Node!   <img> </li>
 	<li>4. A lot of experience working with npm <img> </li>
 </ul>
+
+<h2>Day 11 </h2>
+<ul> Finished My first Local srorage Project
+	<li>1. A lot to learn and scoping</li>
+	<li>2. Looking forward going to Firebase Soon</li>
+	<li>3. Learn the function how to skip "null input " in array from jquery function isEmptyObject  <img> </li>
+	<li>4. Keep Polishing up JS skills!<img> </li>
+</ul>
