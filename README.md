@@ -81,3 +81,11 @@ I've joined the #100DaysOfCode Challenge.
 	<li>4. Keep Polishing up JS skills!
 	this app live https://cryptic-journey-25517.herokuapp.com/ </li>
 </ul>
+
+<h2>Day 12 </h2>
+<ul> Typing Ahead JS30 by Wes Bos
+	<li>1. Another good example from JS30 course </li>
+	<li>2. Pure Vanilla , working with RegEx and ES6</li>
+	<li>3. Adding style right in `` - backticks ...amazing!</li>
+	<li>4. Multifunctional Functions!</li>
+</ul>
