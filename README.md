@@ -89,3 +89,12 @@ I've joined the #100DaysOfCode Challenge.
 	<li>3. Adding style right in `` - backticks ...amazing!</li>
 	<li>4. Multifunctional Functions!</li>
 </ul>
+
+
+<h2>Day 13 </h2>
+<ul> HTML Canvas trick JS30 by Wes Bos
+	<li>1. Another good example from JS30 course </li>
+	<li>2. Pure Vanilla , working Cavas and color flavor!</li>
+	<li>3. http://mothereffinghsl.com/ - Good page with colors!!</li>
+	<li>4. More and more fun JS</li>
+</ul>
