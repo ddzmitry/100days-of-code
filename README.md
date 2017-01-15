@@ -98,3 +98,12 @@ I've joined the #100DaysOfCode Challenge.
 	<li>3. http://mothereffinghsl.com/ - Good page with colors!!</li>
 	<li>4. More and more fun JS</li>
 </ul>
+
+
+<h2>Day 14 </h2>
+<ul> FireBase here it comes
+	<li>1. Everything is new</li>
+	<li>2. Trying get comfortable using data base! </li>
+	<li>3. big project on Firebase is getting there</li>
+	<li>4. More and more fun JS</li>
+</ul>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Sign-Up Today!</title>
+
+  <!-- Bootstrap -->
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <br>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1 class="text-center">Sign-Up Today!</h1>
+    </div>
+    <div class="row">
+
+      <!-- Sign-Up Panel-->
+      <div class="col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">New Member Sign-Up</h3>
+          </div>
+          <div class="panel-body">
+
+            <!-- Sign-up Form (note the various input "types")-->
+            <form role="form">
+              <div class="form-group">
+                <label for="name-input">Name:</label>
+                <input class="form-control" id="name-input" type="text">
+              </div>
+              <div class="form-group">
+                <label for="email-input">Email:</label>
+                <input class="form-control" id="email-input" type="email">
+              </div>
+              <div class="form-group">
+                <label for="age-input">Age:</label>
+                <input class="form-control" id="age-input" type="number">
+              </div>
+              <div class="form-group">
+                <label for="comment-input">How did you hear about us?</label>
+                <textarea class="form-control" id="comment-input" rows="5"></textarea>
+              </div>
+              <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Most Recent Member Panel -->
+      <div class="col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Most Recent Member</h3>
+          </div>
+          <div class="panel-body" id="recent-member">
+            <h2 id="name-display">Jimmy John</h2>
+            <h4 id="email-display">Email: jimmy@john.edu</h4>
+            <h4 id="age-display">Age: 27</h4>
+            <p id="comment-display">I'm signing up, because I want to spread sandwiches to the world.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- jQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+
+  <!-- LINK TO FIREBASE GOES HERE -->
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDbmugD5Mmg7pyr0FHDvF98T7DCEDjU4HY",
+    authDomain: "recentuseruncc.firebaseapp.com",
+    databaseURL: "https://recentuseruncc.firebaseio.com",
+    storageBucket: "recentuseruncc.appspot.com",
+    messagingSenderId: "708626411479"
+  };
+  firebase.initializeApp(config);
+
+  
+
+    //  START CODING BELOW!!
+
+    // Initialize Firebase
+
+    var database = firebase.database();
+      
+
+    // Create a variable to reference the database
+
+
+
+
+    // Capture Button Click
+    $("#add-user").on("click", function() {
+
+
+
+      // YOUR TASK!!!
+
+      var nameNew = $('#name-input').val();
+      var emailNew = $('#email-input').val();
+      var ageNew = $('#age-input').val();
+      var commentNew= $( '#comment-input').val();
+
+                  var user =  { 
+                    'Newname': nameNew ,
+                    'Newemail': emailNew,
+                    'Newage': ageNew,
+                    'Newcomment': commentNew
+                  } ; 
+
+              database.ref().set(user);
+
+      // Code in the logic for storing and retrieving the most recent user.
+
+
+      // Don't refresh the page!
+
+
+
+$("#name-display").html(user.Newname)
+$("#email-display").html(user.Newemail)
+$("#age-display").html(user.Newage)
+$("#comment-display").html(user.Newcomment)
+
+      return false;
+    });
+        
+
+
+      database.ref().on("value", function(snapshot) {
+        var user = snapshot.val();
+      console.log(user);
+      console.log(user.Newage);
+      console.log(user.Newcomment);
+      console.log(user.Newemail);
+      console.log(user.Newname);
+
+$("#name-display").html(user.Newname)
+$("#email-display").html(user.Newemail)
+$("#age-display").html(user.Newage)
+$("#comment-display").html(user.Newcomment)
+    });
+    // Create Firebase "watcher" Hint: .on("value")
+
+    // Create Error Handling
+  </script>
+
+</body>
+
+</html>
