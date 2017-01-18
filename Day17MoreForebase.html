@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>RPS</title>
+              
+
+<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDigZIKV8sGoaAVYSMYEvBfYjow9A942Ko",
+    authDomain: "rpsmultiplay-b5042.firebaseapp.com",
+    databaseURL: "https://rpsmultiplay-b5042.firebaseio.com",
+    storageBucket: "rpsmultiplay-b5042.appspot.com",
+    messagingSenderId: "935179988925"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <!-- Bootstrap -->
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <br>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1 class=" h1main text-center">Rock Paper Scissors!</h1>
+    </div>
+    <div class="row">
+
+      <!-- Sign-Up Panel-->
+      <div class="col-lg-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title player1nametag ">Player 1 </h3>
+          </div>
+          <div class="panel-body">
+
+            <!-- Sign-up Form (note the various input "types")-->
+            <form  id = "player1rps" role="form">
+
+              
+               <button class="btn  char1 btn-default"  data-char = "1"        id="rock1" type="submit">Rock</button>
+                <button class="btn char1 btn-default"  data-char = "2"      id="paper1" type="submit">Paper</button>
+                 <button class="btn char1 btn-default"  data-char = "3"  id="scissors1" type="submit">Scissors</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+            <div class="col-lg-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class=" chatExchange panel-title">Login</h3>
+          </div>
+          <div class=" chatWindow panel-body">
+
+            <!-- Sign-up Form (note the various input "types")-->
+            <form class="login" role="form">
+              <div class="form-group">
+<!--                 <label for="name-input">Name:</label>
+                <input class="form-control" id="name-input" type="text"> -->
+
+                              <div class="form-group">
+                <label for="name-input">Enter Your Name!</label>
+                <input class="form-control" id="name-input" type="text">
+              </div>
+              <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+              </div>
+
+               
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title player2nametag">Player 2</h3>
+          </div>
+          <div class="panel-body">
+
+            <!-- Sign-up Form (note the various input "types")-->
+            <form  id = "player2rps" role="form">
+
+               <button class="btn   char2 btn-default" data-char = "1" id="rock2" type="submit">Rock</button>
+                <button class="btn  char2 btn-default" data-char = "2" id="paper2" type="submit">Paper</button>
+                 <button class="btn  char2 btn-default"  data-char = "3" id="scissors2" type="submit">Scissors</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- jQuery -->
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+
+
+
+    <script>
+
+ var database = firebase.database();
+ var dataMain;
+ var datamessage;
+ var message;
+ var messageHTML;
+console.log(dataMain)
+  $('#player1rps').hide();
+ $('#player2rps').hide();
+var messanger = database.ref('/messanger');
+var gameinHTML = {
+
+                  player1 :{
+                  name: 'NA',
+                  rps: 'NA',
+                  winns: 0,
+                  looses:0,
+                  ties: 0
+                },
+
+                player2 :{
+                name: 'NA',
+                rps: 'NA',
+                winns: 0,
+                looses:0,
+                ties: 0
+                },
+
+}
+
+
+
+
+function setDefault() {
+
+      database.ref().set({
+
+                player1 :{
+                      name: 'NA',
+                      rps: 'NA'
+                },
+
+                player2 :{
+                name: 'NA',
+                rps: 'NA'
+                },
+
+      })
+
+}
+
+
+
+
+
+function nameFunction() {
+
+    $('.login').hide()
+    console.log(dataMain.player1.name == "NA")
+    if ( dataMain.player1.name == "NA" ){
+
+       dataMain.player1.name = $('#name-input').val();
+       gameinHTML.player1.name = $('#name-input').val();
+
+       $('.player1nametag').html(gameinHTML.player1.name )
+
+        database.ref().update({
+//update first player in FireBase
+              player1 : {
+                  name: gameinHTML.player1.name,
+                   rps: gameinHTML.player1.rps,
+              }
+        })
+        openChat()
+            $('#player1rps').show()
+} else if (dataMain.player1.name !== "NA" ) {
+       $('.player1nametag').html(dataMain.player1.name );
+
+       dataMain.player2.name = $('#name-input').val();
+       gameinHTML.player2.name = $('#name-input').val();
+       $('.player2nametag').html(dataMain.player2.name);
+       database.ref().update({
+//update second player in FireBase
+              player2 : {
+                  name: gameinHTML.player2.name,
+                   rps: gameinHTML.player1.rps,
+              }
+
+        })
+       openChat()
+  $('.login').hide()
+
+} 
+
+// now we got two players! 
+
+return false 
+}
+
+function AddNickOnBothScreens() {
+
+  if (dataMain.player1.name !== "NA" && dataMain.player1.name !== "NA") {
+
+
+    $('.player1nametag').html(dataMain.player1.name );
+  } else {
+        return false 
+      // console.log('Looking for 1 player to login')
+  }
+
+}
+
+function openChat(){
+
+      if(dataMain.player1.name !== 'NA' || dataMain.player2.name !== 'NA' ){
+
+        console.log("Activate the chat!")
+        $('.chatExchange').html("Chat Open")
+         $('.chatWindow').html( ` 
+                  <div class="form-group messangerUser" >
+                  <div class = "messanger" ></div>
+                 <div class="form-group">
+                <input class="form-control" id="chatinput" type="text">
+              </div>
+              <button class="btn btn-default message" id="message" type="submit">Message</button>
+              </div>
+              </div>
+          `)
+        
+      }
+              
+     $('#message').on('click', function(event) {
+
+              if(gameinHTML.player1.name == 'NA' ) {
+       event.preventDefault();
+       console.log($('#chatinput').val())
+       message = $('#chatinput').val()
+      var   name = gameinHTML.player2.name
+       messanger.push({name , message})
+       message = '';
+
+     } else {
+
+            console.log($('#chatinput').val())
+       message = $('#chatinput').val()
+       var name = gameinHTML.player1.name
+       messanger.push({name , message})
+       message = '';
+
+     }
+
+
+     });     
+}
+
+
+setInterval(function() {
+AddNickOnBothScreens()
+},1000)
+
+
+ $('.char1').click(function(){
+
+  console.log($(this).data("char"));
+
+  dataMain.player1.rps = $(this).data("char");
+  gameinHTML.player1.rps = $(this).data("char");
+  $('#player1rps').hide()
+
+
+          database.ref().update({
+//update first player in FireBase
+              player1 : {
+                  name: gameinHTML.player1.name,
+                   rps: gameinHTML.player1.rps,
+              }
+        })
+          gameTime();
+  return false 
+ });
+
+
+
+  $('.char2').click(function(){
+
+  console.log($(this).data("char"));
+
+  dataMain.player2.rps = $(this).data("char");
+  gameinHTML.player2.rps = $(this).data("char");
+  $('#player2rps').hide()
+          database.ref().update({
+//update first player in FireBase
+              player2 : {
+                  name: gameinHTML.player2.name,
+                   rps: gameinHTML.player2.rps,
+              }
+        })
+          gameTime();
+  return false 
+
+ })
+
+function gameTime(){
+  if (dataMain.player1.rps !== 'NA' && dataMain.player2.rps !== 'NA' ){
+
+    console.log('GAME ON');
+    console.log(parseInt(dataMain.player1.rps));
+    console.log(parseInt(dataMain.player2.rps));
+    // console.log((2*dataMain.player1.rps + dataMain.player2.rps) % 3) 
+    var result = (2*dataMain.player1.rps + dataMain.player2.rps) % 3;
+          console.log(result);
+
+          switch (result) {
+            case 0:
+              console.log("TIE")
+              gameinHTML.player1.ties ++ 
+              gameinHTML.player2.ties ++
+
+          database.ref().update({
+//update first player in FireBase
+              player1 : {
+                  name: dataMain.player1.name,
+                   tie: gameinHTML.player1.ties,
+                   looses:gameinHTML.player1.looses,
+                   winns :gameinHTML.player1.winns,
+                   rps: 'NA'
+              },
+              player2 : {
+                  name: dataMain.player2.name,
+                   tie: gameinHTML.player2.ties,
+                   winns :gameinHTML.player2.winns,
+                   looses:gameinHTML.player2.looses,
+                   rps: 'NA'
+              },              
+        }) 
+              break;
+              case 1:
+                  console.log("Player 2 wins")
+                    gameinHTML.player1.looses ++
+                    gameinHTML.player2.winns ++
+          database.ref().update({
+//update first player in FireBase
+              player1 : {
+                  name: dataMain.player1.name,
+                   tie: gameinHTML.player1.ties,
+                   looses:gameinHTML.player1.looses,
+                   winns :gameinHTML.player1.winns,
+                   rps: 'NA'
+              },
+              player2 : {
+                  name: dataMain.player2.name,
+                   tie: gameinHTML.player2.ties,
+                   winns :gameinHTML.player2.winns,
+                   looses:gameinHTML.player2.looses,
+                   rps: 'NA'
+
+              },              
+        })                 
+
+                      break;
+                    case 2:
+                        console.log("Player 1 wins")
+                    gameinHTML.player1.winns ++
+                    gameinHTML.player2.looses ++
+          database.ref().update({
+//update first player in FireBase
+              player1 : {
+                  name: dataMain.player1.name,
+                   tie: gameinHTML.player1.ties,
+                   looses:gameinHTML.player1.looses,
+                   winns :gameinHTML.player1.winns,
+                   rps: 'NA'
+              },
+              player2 : {
+                  name: dataMain.player2.name,
+                   tie: gameinHTML.player2.ties,
+                   winns :gameinHTML.player2.winns,
+                   looses:gameinHTML.player2.looses,
+                   rps: 'NA'
+              },              
+        })       
+        break;
+        default: 'Olol'
+        console.log("SMTH WRONG")
+        break;
+          } // end switch here!//Thats big one hahah!
+
+  } else {
+    console.log("Waiting!")
+  }
+
+
+  return false
+}
+
+
+$(document).ready(function(){
+  database.ref().on('value', function(snapshot) {
+    dataMain = snapshot.val();
+    console.log(dataMain)
+     if (gameinHTML.player2.name !== 'NA' && dataMain.player1.rps !== 'NA' ) {
+$('#player2rps').show()
+
+
+
+console.log("Iworked!")
+
+}  else if (dataMain.player2.name !== 'NA' && dataMain.player1.rps !== 'NA') {
+          
+          
+          $('#player1rps').hide()
+}  else if (gameinHTML.player1.name !== 'NA' &&  dataMain.player1.name !== 'NA') {
+  $('#player1rps').show()
+  $('.player2nametag').html(dataMain.player2.name);
+} else if (gameinHTML.player2.rps !== 'NA') {
+
+$('#player2rps').hide()
+}
+
+  else {
+  console.log('Waiting on Player one pick value!')
+}
+  });
+
+ messanger.on("child_added" ,function(sn) {
+
+          console.log(sn.val().message)
+            messageHTML = sn.val().message;
+            name = sn.val().name;
+
+
+            $('.messanger').prepend(` <p> ${name} : ${messageHTML} </p>`);
+            // messageHTML = ""
+           
+        });
+
+setDefault();
+
+  $('#add-user').click(nameFunction);
+
+$('.message').on('click', function(event) {
+  event.preventDefault()
+  console.log("YAYAAYYA")
+});
+
+return false 
+  });
+
+
+
+
+
+
+
+
+
+
+// var name1 = ""
+// var char1;
+// var name2 = ""
+// var char2;
+// var picked1 = false;
+// var picked2 = false;
+// var hand1 = "";
+// var hand2 = "";
+// var clickCount = 0 
+// $(".char1").hide();
+// $(".char2").hide();
+// $('#add-user2').hide();
+
+
+// database.ref().on("value", function (snapshot) {
+
+//  console.log(snapshot.val())
+
+// })
+
+
+//all values global to pl 1
+// players.child("/player1").on("value", function(snapshot) {
+
+// });
+
+// players.child("/player2").on("value", function(snapshot) {
+
+// $("#add-user2").show();
+// });
+
+
+// players.child("/player1").on("child_changed", function(snapshot) {
+
+
+// });
+
+// players.child("/player2").on("child_changed", function(snapshot) { 
+  
+// });
+
+
+// players.child("/player1").on("child_added", function(snapshot) {
+
+// $("#add-user1").hide();
+// });
+
+// players.child("/player2").on("child_added", function(snapshot) {
+
+
+
+// }, function(errorObject) {
+//   console.log("The read failed: " + errorObject.code);
+// });
+
+// // ------------------------------>
+
+// // ----------------------------->
+//     function RPS(hand1,hand2 ) {
+
+//         console.log( "RPS" +  hand1);
+//         console.log( "RPS" + hand2);
+
+//     }
+
+
+
+
+// // Jqueryfunctions
+// $("#add-user").on("click", function() {
+
+
+//                   if (clickCount == 0 {
+
+//  name = $('#name-input').val();
+
+// players.child("/player1").set({
+
+//        player1Name: name1,
+//        charPicked1 : picked1,
+// });  
+
+//                   }  
+
+
+// players.child("/player2").set({
+
+//        waiting : "On plyer 2" 
+       
+// });   
+//     clickCount++
+//     console.log(clickCount);
+//       $(".char1").show();
+//       return false;
+//     });
+
+
+// $("#add-user2").on("click", function() {
+//   $(this).hide();
+//   event.preventDefault();
+// name2 = $('#name-input2').val();
+
+
+// // player2 = database.ref("/players").player2
+
+// players.child("/player2").set({
+
+//        player2Name: name2,
+//       charPicked2 : picked2,
+// });
+
+// $(".char2").show();
+//       return false;
+// });
+
+
+// $('.char1').on('click',function(event) {
+//       event.preventDefault();
+//       $(".char1").hide();
+//       hand1 = $(this).data('char');
+//       picked1 = true; 
+
+//       //set data here 
+// players.child("/player1").update({
+
+//       // player1Name: name1,
+//       charPicked1 : picked1,
+//       rps: hand1
+// });
+// }); 
+
+
+// $('.char2').on('click',function(event) {
+//     event.preventDefault();
+
+//     hand2 = $(this).data('char');
+//     picked2 = true;
+ 
+// players.child("/player2").update({
+
+//       // player2Name: name2,
+//       charPicked2 : picked2,
+//       rps: hand2
+// });
+
+// console.log(players.child("/player2").rps)
+
+// }); 
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

@@ -123,3 +123,11 @@ I've joined the #100DaysOfCode Challenge.
 	<li>3. A lot challanges </li>
 	<li>4. Some code snippets in Day16 Useful!</li>
 </ul>
+
+<h2>Day 17 </h2>
+<ul> FireBase Multiplayer game! 
+	<li>1. A lot new today functiont that Affect HTML on both pages</li>
+	<li>2. I DID MY FIRST LIFE CHAT! </li>
+	<li>3. Function of localsation</li>
+	<li>4. Time for styles on day 18</li>
+</ul>
