@@ -131,3 +131,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>3. Function of localsation</li>
 	<li>4. Time for styles on day 18</li>
 </ul>
+<h2>Day 18 </h2>
+<ul> FireBase Multiplayer game! 
+	<li>1. Finished up on code part</li>
+	<li>2. Created Chuck Norris BOT with API call </li>
+	<li>3. Database works great</li>
+	<li>4. CSS and animation continues</li>
+</ul>
