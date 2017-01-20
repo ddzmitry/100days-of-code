@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center" id="heading">
+            <h1><strong>Employee Data Management</strong></h1>
+            <h2>A Comprehensive Directory of Employee Billable Hours</h2>
+        </div> 
+       <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading" id="current-emp">Current Employees</div>
+      <div class="panel-body">
+        <table  id="employeeForm" style="width:100%">
+          <tr>
+            <th>Employee Name</th>
+            <th>Role</th> 
+            <th>Start Date</th>
+            <th>Month Worked</th>
+            <th>Monthly Rate ($)</th>
+            <th>Total Billed ($)</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td> 
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+
+
+
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Add Employees</div>
+      <div class="panel-body">
+        <form>
+          Name:<br>
+          <input type="text" name="name" id="name"><br>
+          Role:<br>
+          <input type="text" name="role" id="role"><br>
+          Start Date:<br>
+          <input type="text" name="start date" id="start-date"><br>
+          Monthly Rate:<br>
+          <input type="text" name="monthly rate" id="monthly-rate"><br><br>
+          <input type="submit" id="button" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+   </div>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+   <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+   <script src="app.js"></script>
+</body>
+</html>

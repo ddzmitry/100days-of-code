@@ -138,3 +138,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>3. Database works great</li>
 	<li>4. CSS and animation continues</li>
 </ul>
+<h2>Day 19 </h2>
+<ul> FireBase Multiplayer game! 
+	<li>1.Small group project on adding employee to the list</li>
+	<li>2.Synh by time </li>
+	<li>3.Moment.js been understood</li>
+	<li>4. Will continue personal project on 20th day</li>
+</ul>
