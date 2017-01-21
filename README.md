@@ -145,3 +145,8 @@ I've joined the #100DaysOfCode Challenge.
 	<li>3.Moment.js been understood</li>
 	<li>4. Will continue personal project on 20th day</li>
 </ul>
+<h2>Day 20 </h2>
+<ul> FireBase Multiplayer game! 
+	<li>1.Working on CSS styling and respond</li>
+	<li>2.CSS Libraries  </li>
+</ul>
