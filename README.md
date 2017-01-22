@@ -150,3 +150,11 @@ I've joined the #100DaysOfCode Challenge.
 	<li>1.Working on CSS styling and respond</li>
 	<li>2.CSS Libraries  </li>
 </ul>
+<h2>Day 21 </h2>
+<ul> "THE" Project 
+	<li>1.THE RPS OS DONE https://rpsmultiplay-b5042.firebaseapp.com/</li>
+	<li>1.Working on code part and multiple AJAX Calls</li>
+	<li>2.It will be fun  </li>
+	<li>3.More-More code tomorrow! </li>
+	<li>4.Gogle API doesn't like other API's together! ;( </li>
+</ul>
