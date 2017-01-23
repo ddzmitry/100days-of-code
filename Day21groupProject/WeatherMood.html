@@ -1,0 +1,228 @@
+
+<!-- You already have credentials that are suitable for this purpose
+ AIzaSyBRy3kkGO0DbiUr96M7xPhZA1WvX4CCKD8 -Geolocation!
+ AIzaSyATHPPagioRnJR7xhCvEYBT2VVFUkE5ajY - googlemaps
+
+ 3f4f6b8d728af2d4 - weather underground
+ 46cffad69ede49d8ad2e94ff43a84516 - spotify
+
+API key
+
+Key	
+AIzaSyDPRcd06mbo6fY3fDc2bIJE4A7RunYZF2E
+Type	
+None
+Creation date	
+Jan 21, 2017, 9:17:54 PM
+Browser key (auto created by Google Service)
+
+Key	
+AIzaSyDis8TTOcaDju9g8zqWrlNIei5g5hQiyNc
+Type	
+None
+Creation date	
+Jan 11, 2017, 1:02:38 PM
+Server key (auto created by Google Service)
+
+Key	
+AIzaSyBha9wvbV7JIWDSUTHlwN-GPDY3hnfpSek
+Type	
+None
+Creation date	
+Jan 11, 2017, 1:02:49 PM -->
+<!DOCTYPE html>
+<html>
+  <head>
+
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+  <script src="talk.js"></script>
+<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map.  Our map but we are going to make it smaller just for THE LOCAL VIEW UPON REQUEST*/
+      #map {
+        height: 50%;
+        width:40%;
+      }
+      .emotion {
+        margin: 25px;
+        width: 90px;
+        height: 45px;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="map"></div>
+
+        <button class="emotion" >Happy</button> <button class="emotion" >Sad</button>  <button class="emotion">Surprised</button> <button class="emotion">Angry</button>
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyBRy3kkGO0DbiUr96M7xPhZA1WvX4CCKD8",
+    authDomain: "authlearning-31116.firebaseapp.com",
+    databaseURL: "https://authlearning-31116.firebaseio.com",
+    storageBucket: "authlearning-31116.appspot.com",
+    messagingSenderId: "927237143466"
+  };
+
+  firebase.initializeApp(config);//my firebase config did't used yet , but all API's already in ! 
+</script>
+
+ <script>
+ var pos;
+ var weatherReport;
+ var lowtemp;
+        $('.emotion').hide()
+      function initMap() { // this is default gogle map function that gives you lat ang long!
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 15
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+
+
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+          	console.log(position)
+            pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            		// console.log(pos) // kat and lng
+            		findWeather(pos);
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+  function findWeather(pos){
+
+  					var urlGoogle = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${pos.lat},${pos.lng}&key=AIzaSyATHPPagioRnJR7xhCvEYBT2VVFUkE5ajY` // here we use our lat and long to define city name
+
+  						$.ajax({
+  							url: urlGoogle,
+  						})
+  						.done(function(data) {
+  							console.log(data);
+  							console.log(data.results[0].address_components[2].long_name); // our closest city name
+  							// console.log("success");
+  						})
+  						.fail(function() {
+  							console.log("error");
+  						})
+  						.always(function() {
+  							// console.log("complete");
+  						});
+  						
+      						console.log(pos.lat);
+      						console.log(pos.lng);	
+      			var url = `http://api.wunderground.com/api/3f4f6b8d728af2d4/forecast/q/${pos.lat},${pos.lng}.json`			
+      		$.ajax({
+      							url: url, // here we get our weather from at and long from first api call
+
+      						})
+      						.done(function(data) {
+      							// console.log("success");
+      							console.log(data);
+      							console.log(data.forecast.txt_forecast.forecastday[0].fcttext)
+                     weatherReport = data.forecast.txt_forecast.forecastday[0].fcttext;
+
+      							console.log(data.forecast.simpleforecast.forecastday[0].conditions) //conditions ("Rain Sun etc")
+      							console.log(data.forecast.simpleforecast.forecastday[0].icon_url) // img of conditions
+      							console.log(data.forecast.simpleforecast.forecastday[0].low.fahrenheit) // low temp
+
+                     lowtemp = data.forecast.simpleforecast.forecastday[0].low.fahrenheit
+      							console.log(data.forecast.simpleforecast.forecastday[0].high.fahrenheit) //high temp
+                    $('.emotion').show()
+      						
+      						})
+      						.fail(function() {
+      							console.log("error");
+      						})
+      						.always(function() {
+      							// console.log("complete");
+      						});
+      										
+
+
+      			}	
+
+// responsiveVoice.speak(`Adding Category of: ${stringToCapitalize}`);
+
+            if (annyang) {
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+    'I feel sad': function() {
+      console.log('Sad!')
+      responsiveVoice.speak(`Why Do You feel sad?`);
+    },
+        'Weather': function() {
+      console.log('Weather')
+
+      responsiveVoice.speak(`${weatherReport}` ) ;
+    },
+       'What is the weather today': function() {
+      console.log('Weather')
+      responsiveVoice.speak(`${weatherReport}` , {pitch: -1}) ;
+    },
+           'Weather is bad': function() {
+      console.log('Weather')
+      responsiveVoice.speak(`Yes, it is ${lowtemp} fahrenheit, but I can play some music to joy you up`) ;
+    },
+        'Yes Play music': function() {
+      console.log('Weather')
+      responsiveVoice.speak(`Okay I will find something for you!`) ;
+    },
+
+        'I feel happy': function() {
+      console.log('Happy')
+    },
+    'I love you' : function () {
+      console.log("i love you !")
+    }
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+}
+ annyang.start();
+
+
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATHPPagioRnJR7xhCvEYBT2VVFUkE5ajY&callback=initMap">
+    </script>
+  </body>
+</html>

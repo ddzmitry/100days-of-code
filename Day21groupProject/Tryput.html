@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tryout!</title>
+	 <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script> -->
+<script src="talk.js"></script>
+</head>
+<body>
+	
+
+
+	
+<script>
+
+// console.log('Working')
+// if (annyang) {
+//   // Let's define our first command. First the text we expect, and then the function it should call
+//   var commands = {
+//     'hello world': function() {
+//       alert("Hello!");
+//       console.log("Hello");
+//     },
+//     'No': function () {
+//     	console.log("NOOOOOOO")
+//     }
+
+//   };
+
+//   // Add our commands to annyang
+//   annyang.addCommands(commands);
+
+//   // Start listening. You can call this here, or attach this call to an event, button, etc.
+
+  
+// }
+
+// annyang.start();
+
+if (annyang) {
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+    'Hello': function() {
+      console.log('Hello')
+    }
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+}
+ annyang.start();
+
+
+</script>
+</body>
+
+
+</html>
