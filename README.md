@@ -166,9 +166,11 @@ I've joined the #100DaysOfCode Challenge.
 	<li>4.There is a lot!  </li>
 </ul>
 
-<h2>Day 23 -25 </h2>
+<h2>Day 23 - 33 </h2>
 <ul> "THE" Project 
-	<li>1.It is going to be fun! </li>
-	<li>2.Working on applying API's  </li>
-	<li>3. Group Project in progress </li>
+	<li>1.Project Finished </li>
+	<li>2.All 5 API's working </li>
+	<li>3.Main Job was JS </li>
+	<li>3.https://github.com/ddzmitry/weather-wizard </li>
+	<li>3.https://intense-taiga-82542.herokuapp.com </li>
 </ul>
