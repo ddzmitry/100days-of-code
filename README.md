@@ -171,6 +171,13 @@ I've joined the #100DaysOfCode Challenge.
 	<li>1.Project Finished </li>
 	<li>2.All 5 API's working </li>
 	<li>3.Main Job was JS </li>
-	<li>3.https://github.com/ddzmitry/weather-wizard </li>
-	<li>3.https://intense-taiga-82542.herokuapp.com </li>
+	<li>4.https://github.com/ddzmitry/weather-wizard </li>
+	<li>5.https://intense-taiga-82542.herokuapp.com </li>
+</ul>
+
+<h2>Day 34 Node.js </h2>
+<ul> Banking App. using Node.js
+	<li>1.Closures</li>
+	<li>2.Scope </li>
+	<li>3.Working with Obj</li>
 </ul>
