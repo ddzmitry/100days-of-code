@@ -166,7 +166,7 @@ I've joined the #100DaysOfCode Challenge.
 	<li>4.There is a lot!  </li>
 </ul>
 
-<h2>Day 23 - 33 </h2>
+<h2>Day 23 - 32 </h2>
 <ul> "THE" Project 
 	<li>1.Project Finished </li>
 	<li>2.All 5 API's working </li>
@@ -175,9 +175,15 @@ I've joined the #100DaysOfCode Challenge.
 	<li>5.https://intense-taiga-82542.herokuapp.com </li>
 </ul>
 
-<h2>Day 34 Node.js </h2>
+<h2>Day 33 Node.js </h2>
 <ul> Banking App. using Node.js
 	<li>1.Closures</li>
 	<li>2.Scope </li>
 	<li>3.Working with Obj</li>
+</ul>
+<h2>Day 34 Node.js </h2>
+<ul> API Using App Node.js
+	<li>1.Trying to use more ES2015 codes</li>
+	<li>2.Researching Twitter npm</li>
+	<li>3.Working multi line commands</li>
 </ul>
