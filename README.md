@@ -197,4 +197,13 @@ I've joined the #100DaysOfCode Challenge.
 	<li>1.Inquirer implemented</li>
 	<li>2.Working with 4 API's </li>
 	<li>3. Has good console interface </li>
+	<li>https://github.com/ddzmitry/Liri.js-Node.js-</li>
+</ul>
+
+<h2>Day 37 Algorithm</h2>
+<ul> Using fs module to recognize text
+	<li>1.Array functions to generate consistant string</li>
+	<li>2.Generate Articles </li>
+	<li>3.Create solid code</li>
+	
 </ul>
