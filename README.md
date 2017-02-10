@@ -207,3 +207,11 @@ I've joined the #100DaysOfCode Challenge.
 	<li>3.Create solid code</li>
 	
 </ul>
+
+<h2>Day 38 Algorithm</h2>
+<ul> Using Node.js to Crack hangman Game!
+	<li>1.We wanna let computer do all job!</li>
+	<li>2.Generate abc randomly , put it in function, and define the word! </li>
+	<li>3.node- Babel Require! </li>
+	
+</ul>
