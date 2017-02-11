@@ -215,3 +215,11 @@ I've joined the #100DaysOfCode Challenge.
 	<li>3.node- Babel Require! </li>
 	
 </ul>
+
+<h2>Day 38 Little Break, but still coding</h2>
+<ul> Took another lesson from JS30 about checkboxes
+	<li>1.ES2015 progress ----> around 30% (a lot to learn there)</li>
+	<li>2.Catching functions using bunch of for loops! </li>
+	<li>3 It feels liked JS becomes the tool for everything! </li>
+	
+</ul>
