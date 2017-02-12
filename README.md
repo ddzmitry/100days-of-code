@@ -216,10 +216,18 @@ I've joined the #100DaysOfCode Challenge.
 	
 </ul>
 
-<h2>Day 38 Little Break, but still coding</h2>
+<h2>Day 39 Little Break, but still coding</h2>
 <ul> Took another lesson from JS30 about checkboxes
 	<li>1.ES2015 progress ----> around 30% (a lot to learn there)</li>
 	<li>2.Catching functions using bunch of for loops! </li>
 	<li>3 It feels liked JS becomes the tool for everything! </li>
+	
+</ul>
+
+<h2>Day 40 Constructors Node.js</h2>
+<ul> Constructors This!!!!
+	<li>1.ES2015 progress ----> around 35% (a lot to learn there)</li>
+	<li>2.This! is this is this ? or this is that? </li>
+	<li>3 Scoping objects,functions inside of objects, a lot of fun!! </li>
 	
 </ul>
