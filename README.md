@@ -231,3 +231,11 @@ I've joined the #100DaysOfCode Challenge.
 	<li>3 Scoping objects,functions inside of objects, a lot of fun!! </li>
 	
 </ul>
+
+<h2>Day 41 Uding Express and Node.js</h2>
+<ul> First time hade a chance of uding what I currently know doing coure on Lynda.com
+	<li>1.Creating rputs and using ejs</li>	
+	<li>2. Deploy with heroku</li>
+	<li>3. Using a lot of new commands!</li>
+	<li>4. https://thawing-dawn-49006.herokuapp.com/ </li>
+</ul>
