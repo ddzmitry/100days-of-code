@@ -239,3 +239,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>3. Using a lot of new commands!</li>
 	<li>4. https://thawing-dawn-49006.herokuapp.com/ </li>
 </ul>
+<h2>Day 43 Node.js working with Prototypes</h2>
+<ul> 
+	<li>1.Creating Prototypes</li>	
+	<li>2. Assiging Prototypes to the Constructors</li>
+	<li>3. Creating input with Inquirer</li>
+	<li>4. Math.random() is favorite thing! </li>
+</ul>
