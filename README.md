@@ -253,3 +253,8 @@ I've joined the #100DaysOfCode Challenge.
 	<li>2.Workingin in Multiple JS files</li>
 	<li>3.Learned how to dynamicaly create JSON using JS from USER input</li>
 </ul>
+<h2>Day 44 Node.js Project Ready!</h2>
+<ul> 
+	<li>https://github.com/ddzmitry/Flashcard-Generator</li>	
+	
+</ul>

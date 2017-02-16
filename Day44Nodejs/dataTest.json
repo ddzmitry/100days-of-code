@@ -1,0 +1,39 @@
+{
+    "cards": [
+        {
+            "front": "land set aside for the Native Americans",
+            "back": "reservation",
+            "type": "BasicCard"
+        },
+        {
+            "front": "become similar to one's environment",
+            "back": "assimilate",
+            "type": "BasicCard"
+        },
+        {
+            "front": "land given by a government",
+            "back": "land grant",
+            "type": "BasicCard"
+        },
+        {
+            "front": "African Americans who migrated from the South to the West fter the Civil War",
+            "back": "Exodoster",
+            "type": "BasicCard"
+        },
+        {
+            "front": "Who said \"Give me liberty, or give me death!\"",
+            "back": "Patrick Henry",
+            "type": "BasicCard"
+        },
+        {
+            "front": "First president of US was",
+            "back": "Washington",
+            "type": "BasicCard"
+        },
+        {
+            "front": "the author of Emancipation Proclamation was",
+            "back": "Lincoln",
+            "type": "BasicCard"
+        }
+    ]
+}
