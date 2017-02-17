@@ -258,3 +258,8 @@ I've joined the #100DaysOfCode Challenge.
 	<li>https://github.com/ddzmitry/Flashcard-Generator</li>	
 	
 </ul>
+<h2>Day 45-46 MySQL Lynda.com!</h2>
+<ul> 
+	<li>Learning concepts of MySQL!</li>	
+	
+</ul>
