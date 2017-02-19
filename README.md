@@ -263,3 +263,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Learning concepts of MySQL!</li>	
 	
 </ul>
+<h2>Day47 MySQL + Node.js</h2>
+<ul> 
+	<li>Creating Simple queries in Node.js for SQL</li>	
+	<li>This is so much fun!</li>	
+	<li>Will be implementing inquerer tomorrow</li>	
+	
+</ul>
