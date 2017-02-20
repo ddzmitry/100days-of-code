@@ -270,3 +270,12 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Will be implementing inquerer tomorrow</li>	
 	
 </ul>
+
+<h2>Day48 MySQL + Node.js</h2>
+<ul> 
+	
+	<li>This is so much fun!</li>	
+	<li>Inquirer working</li>
+	<li>Queries are working</li>		
+	<li>Learning Alias tomorrow</li>
+</ul>
