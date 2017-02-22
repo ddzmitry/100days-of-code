@@ -279,3 +279,12 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Queries are working</li>		
 	<li>Learning Alias tomorrow</li>
 </ul>
+
+<h2>Day49 - 50 MySQL + Node.js</h2>
+<ul> 
+	
+	<li>I finshed my first Node.js and SQL app</li>	
+	<li>Created Three enviroments </li>
+	<li>Create Data in JSON</li>		
+	<li>Will Deploy video tomorrow</li>
+</ul>
