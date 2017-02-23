@@ -288,3 +288,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Create Data in JSON</li>		
 	<li>Will Deploy video tomorrow</li>
 </ul>
+
+<h2>Day49 - 50 MySQL + Node.js</h2>
+<ul> 
+	
+	<li>Polishing up my appp</li>		
+	<li>Will Deploy video tomorrow</li>
+</ul>
