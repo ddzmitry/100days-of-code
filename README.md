@@ -289,9 +289,17 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Will Deploy video tomorrow</li>
 </ul>
 
-<h2>Day49 - 50 MySQL + Node.js</h2>
+<h2>Day 51 MySQL + Node.js</h2>
 <ul> 
 	
 	<li>Polishing up my appp</li>		
 	<li>Will Deploy video tomorrow</li>
+</ul>
+
+<h2>Day 52  MySQL + Node.js</h2>
+<ul> 
+	
+	<li>App Deployed</li>		
+	<li>Video right here: https://www.youtube.com/watch?v=20j4_dZTc8c&feature=youtu.be </li>
+	<li>Repo:https://github.com/ddzmitry/BAMAZONE </li>
 </ul>
