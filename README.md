@@ -303,3 +303,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Video right here: https://www.youtube.com/watch?v=20j4_dZTc8c&feature=youtu.be </li>
 	<li>Repo:https://github.com/ddzmitry/BAMAZONE </li>
 </ul>
+
+<h2>Day 53  Little Algorithm Practice</h2>
+<ul> 
+	
+	<li>Workong with strings</li>
+	<li>Split/Slice/EndWith</li>		
+</ul>
