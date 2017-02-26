@@ -310,3 +310,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Workong with strings</li>
 	<li>Split/Slice/EndWith</li>		
 </ul>
+
+<h2>Day 54  Slide and Scroll JS30 course</h2>
+<ul> 
+	
+	<li>Workong with ES6</li>
+	<li>Sccesing document objects and applying CSS with ES6</li>		
+</ul>
