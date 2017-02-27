@@ -317,3 +317,9 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Workong with ES6</li>
 	<li>Sccesing document objects and applying CSS with ES6</li>		
 </ul>
+<h2>Day 55  Building Server with Node.js</h2>
+<ul> 
+	
+	<li>Workong with Node again</li>
+	<li>Creating Server and little backend</li>		
+</ul>
