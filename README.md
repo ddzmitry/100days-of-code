@@ -323,3 +323,11 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Workong with Node again</li>
 	<li>Creating Server and little backend</li>		
 </ul>
+
+<h2>Day 56  Building Server with Node.js and making HTML routs</h2>
+<ul> 
+	<li>Using URL,HTTP package</li>
+	<li>Creating Server and applying routs on front end</li>	
+	<li>using postman to add information to the Database</li>	
+	Offtopic: foun great usage og emojies ! 💩
+</ul>
