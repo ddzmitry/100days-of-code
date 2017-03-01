@@ -331,3 +331,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>using postman to add information to the Database</li>	
 	Offtopic: foun great usage og emojies ! 💩
 </ul>
+
+<h2>Day 57  Working on FullStack app with Express.js and Node.js </h2>
+<ul> 
+	<li>Creating Express server</li>
+	<li>Creating Routs</li>	
+	<li>P.S. Uploaded code of Algorithm for this day to display christmasTree</li>	
+</ul>
