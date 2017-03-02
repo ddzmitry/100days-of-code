@@ -338,3 +338,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Creating Routs</li>	
 	<li>P.S. Uploaded code of Algorithm for this day to display christmasTree</li>	
 </ul>
+
+<h2>Day 58  Winished coding part ofFullStack app with Express.js and Node.js </h2>
+<ul> 
+	<li>Routings made</li>
+	<li>Pathes made</li>	
+	<li>AJAX post,get</li>	
+</ul>
