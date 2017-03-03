@@ -345,3 +345,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Pathes made</li>	
 	<li>AJAX post,get</li>	
 </ul>
+
+<h2>Day 59 Working on UI part of my Express.js app </h2>
+<ul> 
+	<li>Input</li>
+	<li>Tests</li>	
+	<li>Rendering JSON properly</li>	
+</ul>
