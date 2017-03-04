@@ -352,3 +352,11 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Tests</li>	
 	<li>Rendering JSON properly</li>	
 </ul>
+
+
+<h2>Day 60 13 hour work shif, did first two Uler functions </h2>
+<ul> 
+	<li>Did Uler 1 and Uler2s</li>
+	<li>Worked with Recursion</li>	
+	<li>Worked with Fibbonachi</li>	
+</ul>
