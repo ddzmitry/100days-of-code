@@ -360,3 +360,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Worked with Recursion</li>	
 	<li>Worked with Fibbonachi</li>	
 </ul>
+
+<h2>Day 61 Full Stack web app with Express,Node,Bootstrap,JSON</h2>
+<ul> 
+	<li>Routs made for each HTML and API post call</li>
+	<li>GET/POST with jQuery AJAX</li>	
+	<li>Parsing and Pushing daya in proper format</li>	
+</ul>
