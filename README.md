@@ -367,3 +367,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>GET/POST with jQuery AJAX</li>	
 	<li>Parsing and Pushing daya in proper format</li>	
 </ul>
+
+<h2>Day 62 Learning handlebars</h2>
+<ul> 
+	<li>It is time to learn something and make life easier</li>
+	<li>Learning new to me handlebars with express and node.js</li>	
+	<li>Finisinh my express project tomorrow</li>	
+</ul>
