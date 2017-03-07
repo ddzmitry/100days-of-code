@@ -374,3 +374,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Learning new to me handlebars with express and node.js</li>	
 	<li>Finisinh my express project tomorrow</li>	
 </ul>
+
+<h2>Day 63 Handlebars + Express + MySQL</h2>
+<ul> 
+	<li>Fullstack now!</li>
+	<li>Practice practice</li>	
+	<li>Form with method post excludes all AJAX call</li>	
+</ul>

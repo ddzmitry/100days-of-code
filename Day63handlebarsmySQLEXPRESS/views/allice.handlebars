@@ -1,0 +1,22 @@
+
+
+			<h1>{{title}}</h1>
+<ul>
+	{{#each icecreams}}
+	<li>
+		<p>Flavor: {{flavor}}</p>
+		<p>Price: {{price}}</p>
+		<p>Coolenest: {{coolnest}}</p>
+		
+	</li>
+	{{/each}}
+</ul>
+
+<h4>Add Ice Cream</h4>
+<form action="/" method="POST">
+	
+	Name: <textarea type="text" name="flavor" ></textarea>
+	Price: <textarea type="text" name="price" ></textarea>
+	CoolisIt: <textarea type="text" name="coolnest" ></textarea>
+	<button type="submit"> Sbm</button>
+</form>
