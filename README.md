@@ -381,3 +381,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Practice practice</li>	
 	<li>Form with method post excludes all AJAX call</li>	
 </ul>
+
+<h2>Day 64 Express Project Deployed</h2>
+<ul> 
+	<li>Fullstack now!</li>
+	<li>Practice practice</li>	
+	<li>https://hidden-fortress-88093.herokuapp.com/</li>	
+</ul>
