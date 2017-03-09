@@ -1,0 +1,38 @@
+<h1>Wishes Saver</h1>
+
+<h3>Wishes that you would like to save!</h3>
+
+<ul>
+  {{#each events}}
+  	<li>
+  	   <p>ID: {{this.id}}</p>
+       <p>Event: {{this.event}}</p>
+  	</li>
+
+	<form action="/{{this.id}}?_method=DELETE" method="POST">
+	<input type="hidden" name="id" value="{{this.id}}">
+	<button type="submit">Delete {{this.id}}</button>
+</form>
+  {{/each}}
+
+
+
+</ul>
+
+<h2>Here You Can ADD some other stuff!</h2>
+<form action="/" method="POST">
+	<textarea type="text" name="event"></textarea>
+
+	<button type="submit">Submit</button>
+</form>
+
+
+
+
+<form action="/?_method=PUT" method="POST">
+<p>What ID of form you would like to update!</p>
+	<textarea type="text" name="id"></textarea>
+	<p>What would you like to overriride!</p>
+		<textarea type="text" name="text"></textarea>
+	<button type="submit">Update</button>
+</form>
