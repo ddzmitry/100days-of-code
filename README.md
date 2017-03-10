@@ -394,3 +394,9 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Method Override</li>	
 	<li>GET/PUT/DELETE Methods</li>	
 </ul>
+
+<h2>Day 66 Long day at work did Euler Challenge 3</h2>
+<ul> 
+	<li>Prime Numbers</li>
+	<li>Working with Reduce method</li>	
+</ul>
