@@ -400,3 +400,9 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Prime Numbers</li>
 	<li>Working with Reduce method</li>	
 </ul>
+
+<h2>Day 67 Working on understanding ORM concept</h2>
+<ul> 
+	<li>mySQL</li>
+	<li>Express,Node</li>	
+</ul>
