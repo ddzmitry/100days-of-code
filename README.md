@@ -416,9 +416,10 @@ I've joined the #100DaysOfCode Challenge.
 	<i>It makes more sense now! So  each Router limited by table and passing to ORM  
 	predefined table with columns and data you specify 
 	in Controller ...makes sence)
-
-		<bold>PS. Controler(app usage FROM USER) -->(ROUTER) pathes to MODEL (cat.js Where we USE exact table 'cats' or any table specified to ROUTER ) -->
+		<br>
+		<br>
+		<b> <p>PS. Controler(app usage FROM USER) -->(ROUTER) pathes to MODEL (cat.js Where we USE exact table 'cats' or any table specified to ROUTER ) -->
 		ORM ( takes table name from MODEL and VARS from Controlers, runs query) --> returns data back to server -->
-		back to controler via CALLBACK(data) funciton --> placed to the object -->rendered in the page!</bold>
+		back to controler via CALLBACK(data) funciton --> placed to the object -->rendered in the page! </p></b>
 	</i>
 </ul>
