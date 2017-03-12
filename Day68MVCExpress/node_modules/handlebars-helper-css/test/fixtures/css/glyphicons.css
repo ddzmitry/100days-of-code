@@ -1,0 +1,35 @@
+.glyphicons {
+  padding-left: 0;
+  padding-bottom: 1px;
+  margin-bottom: 20px;
+  list-style: none;
+  overflow: hidden;
+}
+.glyphicons li {
+  float: left;
+  width: 25%;
+  height: 115px;
+  padding: 10px;
+  margin: 0 -1px -1px 0;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+  border: 1px solid #fff;
+}
+.glyphicons li:hover {
+  background-color: rgba(86, 61, 124, 0.1);
+}
+.glyphicons .glyphicon {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.glyphicons .glyphicon-class {
+  display: block;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .glyphicons li {
+    width: 12.5%;
+  }
+}

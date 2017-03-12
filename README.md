@@ -406,3 +406,19 @@ I've joined the #100DaysOfCode Challenge.
 	<li>mySQL</li>
 	<li>Express,Node</li>	
 </ul>
+
+<h2>Day 68 Working on understanding ORM, MVC using Express</h2>
+<ul> 
+	<li>Creating Router(for routes)</li>
+	<li>Using modules</li>	
+	<li>ORM with SQL</li>	
+	<li>Applying changes in handlebars</li>	
+	<i>It makes more sense now! So  each Router limited by table and passing to ORM  
+	predefined table with columns and data you specify 
+	in Controller ...makes sence)
+
+		<bold>PS. Controler(app usage FROM USER) -->(ROUTER) pathes to MODEL (cat.js Where we USE exact table 'cats' or any table specified to ROUTER ) -->
+		ORM ( takes table name from MODEL and VARS from Controlers, runs query) --> returns data back to server -->
+		back to controler via CALLBACK(data) funciton --> placed to the object -->rendered in the page!</bold>
+	</i>
+</ul>

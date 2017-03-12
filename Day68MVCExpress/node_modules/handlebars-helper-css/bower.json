@@ -1,0 +1,10 @@
+{
+  "name": "handlebars-helper-css",
+  "version": "0.1.0",
+  "main": [
+    "./index.js"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.0.3"
+  }
+}

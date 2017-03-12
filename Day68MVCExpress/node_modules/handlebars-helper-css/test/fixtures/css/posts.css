@@ -1,0 +1,92 @@
+.post,
+.post-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.post {
+  position: relative;
+  display: block;
+  margin-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid #f5f5f5;
+  word-wrap: break-word;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+.post:first-of-type {
+  border-top: none;
+}
+.pager + .post {
+  border-top: none;
+}
+.post,
+.post .post {
+  margin-top: 15px;
+}
+.post:first-child {
+  margin-top: 0;
+}
+.post-body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+.media-object {
+  display: block;
+}
+.media-object-round {
+  display: inline-block;
+  border-radius: 100px;
+}
+.media-object-round.pull-left {
+  margin: 15px 15px 15px 0;
+}
+.media-object-round.pull-right {
+  margin: 15px 0 15px 15px;
+}
+.post-heading {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 25px 0;
+}
+.post-heading:hover {
+  color: #444444;
+}
+.post-body {
+  line-height: 1.45;
+  font-size: 20px;
+}
+.post-body a,
+.post-body a:hover,
+.post-body a:focus {
+  color: #444444;
+  text-decoration: none;
+  outline: none;
+}
+.post-body p {
+  margin-bottom: 30px;
+}
+.post-footer {
+  font-size: 16px;
+  padding: 15px 0;
+}
+.post-footer a,
+.post-footer a:hover,
+.post-footer a:focus {
+  color: #999999;
+}
+.post > .pull-left {
+  margin-right: 10px;
+}
+.post > .pull-right {
+  margin-left: 10px;
+}
+.posts {
+  padding-left: 0;
+  list-style: none;
+}
+.posts .post-heading {
+  font-size: 30px;
+  margin: 20px 0 10px;
+}

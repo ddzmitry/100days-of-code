@@ -1,0 +1,27 @@
+/* Outline button for use within the docs */
+.btn-outline {
+  color: #fff;
+  background-color: #888;
+  border-color: #e5e5e5;
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  color: #fff;
+  background-color: #1d365d;
+  border-color: #fff;
+}
+/* Inverted outline button (white on dark) */
+.btn-outline-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: #b9c8e0;
+}
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active {
+  color: #1d365d;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #fff;
+}

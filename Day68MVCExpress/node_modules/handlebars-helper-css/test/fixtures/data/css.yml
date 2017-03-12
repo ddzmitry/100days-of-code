@@ -1,0 +1,8 @@
+clean:       true
+copy:        true
+minify:      true
+cwd:
+ext:         .min.css
+encoding:    utf8
+algorithm:   md5
+length:      5

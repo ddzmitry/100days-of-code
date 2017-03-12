@@ -1,0 +1,221 @@
+.example {
+  position: relative;
+  padding: 45px 15px 15px;
+  margin: 0 -15px 15px;
+  background-color: #fff;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.05);
+  border-color: #e5e5e5 #eee #eee;
+  border-style: solid;
+  border-width: 1px 0;
+}
+.example:after {
+  content: "Example";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.example + .highlight {
+  margin: -15px -15px 15px;
+  border-radius: 0;
+  border-width: 0 0 1px;
+}
+@media (min-width: 768px) {
+  .example {
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #fff;
+    border-width: 1px;
+    border-color: #ddd;
+    border-radius: 4px 4px 0 0;
+    box-shadow: none;
+  }
+  .example + .highlight {
+    margin-top: -16px;
+    margin-left: 0;
+    margin-right: 0;
+    border-width: 1px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+.example .container {
+  width: auto;
+}
+.example > p:last-child,
+.example > ul:last-child,
+.example > ol:last-child,
+.example > blockquote:last-child,
+.example > .form-control:last-child,
+.example > .table:last-child,
+.example > .navbar:last-child,
+.example > .jumbotron:last-child,
+.example > .alert:last-child,
+.example > .panel:last-child,
+.example > .list-group:last-child,
+.example > .well:last-child,
+.example > .progress:last-child,
+.example > .table-responsive:last-child > .table {
+  margin-bottom: 0;
+}
+.example > p > .close {
+  float: none;
+}
+.example-type .table .info {
+  color: #999;
+  vertical-align: middle;
+}
+.example-type .table td {
+  padding: 15px 0;
+  border-color: #eee;
+}
+.example-type .table tr:first-child td {
+  border-top: 0;
+}
+.example-type h1,
+.example-type h2,
+.example-type h3,
+.example-type h4,
+.example-type h5,
+.example-type h6 {
+  margin: 0;
+}
+.example > .img-circle,
+.example > .img-rounded,
+.example > .img-thumbnail {
+  margin: 5px;
+}
+.example > .table-responsive > .table {
+  background-color: #fff;
+}
+.example > .btn,
+.example > .btn-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.example > .btn-toolbar + .btn-toolbar {
+  margin-top: 10px;
+}
+.example-control-sizing select,
+.example-control-sizing input[type="text"] + input[type="text"] {
+  margin-top: 10px;
+}
+.example-form .input-group {
+  margin-bottom: 10px;
+}
+.example > textarea.form-control {
+  resize: vertical;
+}
+.example > .list-group {
+  max-width: 400px;
+}
+.example .navbar:last-child {
+  margin-bottom: 0;
+}
+.navbar-top-example,
+.navbar-bottom-example {
+  z-index: 1;
+  padding: 0;
+  overflow: hidden;
+}
+.navbar-top-example .navbar-header,
+.navbar-bottom-example .navbar-header {
+  margin-left: 0;
+}
+.navbar-top-example .navbar-fixed-top,
+.navbar-bottom-example .navbar-fixed-bottom {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+}
+.navbar-top-example {
+  padding-bottom: 45px;
+}
+.navbar-top-example:after {
+  top: auto;
+  bottom: 15px;
+}
+.navbar-top-example .navbar-fixed-top {
+  top: -1px;
+}
+.navbar-bottom-example {
+  padding-top: 45px;
+}
+.navbar-bottom-example .navbar-fixed-bottom {
+  bottom: -1px;
+}
+.navbar-bottom-example .navbar {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .navbar-top-example .navbar-fixed-top,
+  .navbar-bottom-example .navbar-fixed-bottom {
+    position: absolute;
+  }
+  .navbar-top-example {
+    border-radius: 0 0 4px 4px;
+  }
+  .navbar-bottom-example {
+    border-radius: 4px 4px 0 0;
+  }
+}
+.example .pagination {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.example > .pager {
+  margin-top: 0;
+}
+.example-modal {
+  background-color: #f5f5f5;
+}
+.example-modal .modal {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  z-index: 1;
+  display: block;
+}
+.example-modal .modal-dialog {
+  left: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.example > .dropdown > .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 5px;
+}
+.example-tabs .nav-tabs {
+  margin-bottom: 15px;
+}
+.example-tooltips {
+  text-align: center;
+}
+.example-tooltips > .btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.example-popover {
+  padding-bottom: 24px;
+  background-color: #f9f9f9;
+}
+.example-popover .popover {
+  position: relative;
+  display: block;
+  float: left;
+  width: 260px;
+  margin: 20px;
+}
+.scrollspy-example {
+  position: relative;
+  height: 200px;
+  margin-top: 10px;
+  overflow: auto;
+}

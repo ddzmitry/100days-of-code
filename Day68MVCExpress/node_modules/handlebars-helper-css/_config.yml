@@ -1,0 +1,16 @@
+# =============================================
+# Build config
+# =============================================
+
+root:    _gh_pages
+dest:    test/actual
+assets:  <%= site.dest %>/assets
+
+# Source CSS
+css:     test/fixtures/css
+
+# Data
+data:    test/fixtures/data
+
+# Templates
+pages:   test/fixtures

@@ -1,0 +1,34 @@
+.social {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.social-buttons {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.social-buttons li {
+  display: inline-block;
+  line-height: 1;
+  padding: 5px 8px;
+}
+.social-buttons .twitter-follow-button {
+  width: 225px !important;
+}
+.social-buttons .twitter-share-button {
+  width: 98px !important;
+}
+.github-btn {
+  border: 0;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .social {
+    text-align: left;
+  }
+  .social-buttons li:first-child {
+    padding-left: 0;
+  }
+}

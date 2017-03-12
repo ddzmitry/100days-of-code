@@ -1,0 +1,8 @@
+body {
+  position: relative;
+  padding-top: 60px;
+}
+.table code {
+  font-size: 13px;
+  font-weight: normal;
+}
