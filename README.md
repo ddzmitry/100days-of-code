@@ -423,3 +423,14 @@ I've joined the #100DaysOfCode Challenge.
 		back to controler via CALLBACK(data) funciton --> placed to the object -->rendered in the page! </p></b>
 	</i>
 </ul>
+
+<h2>Day 69 Create my own ORM,MVC,Full-Stack WebApp in ES6</h2>
+<ul> 
+	<li>https://github.com/ddzmitry/Burgers</li>	
+
+</ul>
+<h2>Day 70 First Time touched AngularJS</h2>
+<ul> 
+	<li>http://jsfiddle.net/ddzmitry/tnutq2vv/81/</li>	
+
+</ul>
