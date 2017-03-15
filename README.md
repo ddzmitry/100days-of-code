@@ -434,3 +434,9 @@ I've joined the #100DaysOfCode Challenge.
 	<li>http://jsfiddle.net/ddzmitry/tnutq2vv/81/</li>	
 
 </ul>
+
+<h2>Day 71 Learning Sequelize</h2>
+<ul> 
+	<li>Created Dynamic Sequelize Work enviroment using Express.js and Node.js</li>	
+	<li>Learned CRUD with Sequelize </li>
+</ul>
