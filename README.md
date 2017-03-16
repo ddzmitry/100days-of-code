@@ -440,3 +440,10 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Created Dynamic Sequelize Work enviroment using Express.js and Node.js</li>	
 	<li>Learned CRUD with Sequelize </li>
 </ul>
+
+<h2>Day 72 Implementing CRUD sequilizer in FullStack app</h2>
+<ul> 
+	<li>USING Sequlizer CRUD methods</li>	
+	<li>Creating Tables</li>
+	<li> Use sequlizer -cli</li>
+</ul>
