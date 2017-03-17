@@ -447,3 +447,7 @@ I've joined the #100DaysOfCode Challenge.
 	<li>Creating Tables</li>
 	<li> Use sequlizer -cli</li>
 </ul>
+<h2>Day 73 Uler 4 </h2>
+<ul> 
+		<li> Working on Uler on longer working days</li>
+</ul>
