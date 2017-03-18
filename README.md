@@ -451,3 +451,8 @@ I've joined the #100DaysOfCode Challenge.
 <ul> 
 		<li> Working on Uler on longer working days</li>
 </ul>
+
+<h2>Day 74 Sequlizer </h2>
+<ul> 
+		<li>  Working with Sequlizer</li>
+</ul>
