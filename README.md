@@ -456,3 +456,13 @@ I've joined the #100DaysOfCode Challenge.
 <ul> 
 		<li>  Working with Sequlizer</li>
 </ul>
+
+<h2>Day 75 Group Project Sequlizer CRUD, MVC  </h2>
+<ul> 
+<li>Set up Server</li>
+<li>Created API and HTML routes</li>
+<li>SetUp handlebars</li>
+<li>Login/SignUp/main pages</li>
+<li>Everything returns JSON</li>
+<li>https://github.com/nhabet01/Project2_PetAdoption/tree/Dzmitry</li>
+</ul>
