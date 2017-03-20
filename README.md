@@ -466,3 +466,11 @@ I've joined the #100DaysOfCode Challenge.
 <li>Everything returns JSON</li>
 <li>https://github.com/nhabet01/Project2_PetAdoption/tree/Dzmitry</li>
 </ul>
+<h2>Day 76 Group Project Sequlizer CRUD, MVC  </h2>
+<ul> 
+<li>Set up Forms on INPUT with methods override </li>
+<li>Set API call and return to HTML (with handlebars)</li>
+<li>Set up (ify statements for parameters for API)</li>
+<li>Call Back on API => render => Handlebars</li>
+<li>In Need of DB and beginning of the front end</li>
+</ul>
