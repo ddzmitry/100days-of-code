@@ -474,3 +474,10 @@ I've joined the #100DaysOfCode Challenge.
 <li>Call Back on API => render => Handlebars</li>
 <li>In Need of DB and beginning of the front end</li>
 </ul>
+
+<h2>Day 77 Group Project Sequlizer CRUD, MVC  </h2>
+<ul>
+<li>Created DB </li>
+<li>Added basic functionality and first INSERT statement to DB</li>
+<li>Need work on Validations for email,password match,zipcode Regex</li>
+</ul>
