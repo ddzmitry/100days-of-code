@@ -491,3 +491,11 @@ I've joined the #100DaysOfCode Challenge.
 <li>BURGER APP http://still-atoll-78310.herokuapp.com/ </li>
 </ul>
 
+
+<h2>Day 79 Group Project Sequlizer CRUD, MVC / Finished CSS in Burgers HW  </h2>
+<li>Did BURGER APP with sequlize!</li>
+<li>Validation edits </li>
+<li>ZipCode validator update</li>
+<li>Frontend additions and update</li>
+<li>Validation update on login page and signup page</li>
+<li>Need to work on LogOut option,authenification, Front End for day 6</li>
