@@ -499,3 +499,7 @@ I've joined the #100DaysOfCode Challenge.
 <li>Frontend additions and update</li>
 <li>Validation update on login page and signup page</li>
 <li>Need to work on LogOut option,authenification, Front End for day 6</li>
+
+<h2>Day 80 Group Project Sequlizer CRUD, MVC / Finished CSS in Burgers HW  </h2>
+<li>Cookie-Parser</li>
+<li>express-session </li>
