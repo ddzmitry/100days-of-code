@@ -503,3 +503,9 @@ I've joined the #100DaysOfCode Challenge.
 <h2>Day 80 Group Project Sequlizer CRUD, MVC / Finished CSS in Burgers HW  </h2>
 <li>Cookie-Parser</li>
 <li>express-session </li>
+
+<h2>Day 81-82 Group Project Sequlizer CRUD, MVC ...App comming soon </h2>
+<li>Cookie-Parser - DOne</li>
+<li>express-session - DONE </li>
+<li>Authenification - DONE </li>
+<li>Additional API call aplied for favorite anomals</li>
