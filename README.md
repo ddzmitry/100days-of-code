@@ -509,3 +509,12 @@ I've joined the #100DaysOfCode Challenge.
 <li>express-session - DONE </li>
 <li>Authenification - DONE </li>
 <li>Additional API call aplied for favorite anomals</li>
+
+
+
+
+
+<h2>Day 83 Group Project Sequlizer CRUD, MVC ...App comming soon </h2>
+<li>Created Favorites rout using searched pets - DZ</li>
+<li>Will work on delete from favorites function tomorrow - DZ</li>
+<li>Need get on Frond End and still need validation for password match on signup pahe - DZ</li>
