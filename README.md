@@ -518,3 +518,8 @@ I've joined the #100DaysOfCode Challenge.
 <li>Created Favorites rout using searched pets - DZ</li>
 <li>Will work on delete from favorites function tomorrow - DZ</li>
 <li>Need get on Frond End and still need validation for password match on signup pahe - DZ</li>
+
+<h2>Day 84 Group Project Sequlizer CRUD, MVC ...App comming soon </h2>
+<li>Front End  - 80% Done -DZ </li>      
+<li>Validation - moved to back End</li>
+<li>Need Poop up for images with data</li>
