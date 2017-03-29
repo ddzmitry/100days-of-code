@@ -523,3 +523,8 @@ I've joined the #100DaysOfCode Challenge.
 <li>Front End  - 80% Done -DZ </li>      
 <li>Validation - moved to back End</li>
 <li>Need Poop up for images with data</li>
+
+<h2>Day 85 Group Project Sequlizer CRUD, MVC ...App comming soon </h2>
+<li>Front End  - Full Rebuild Done</li>      
+<li>Project - Ready to Deploy Tomorrow</li>
+<li>Started on MongoDB</li>
