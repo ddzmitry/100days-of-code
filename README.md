@@ -528,3 +528,8 @@ I've joined the #100DaysOfCode Challenge.
 <li>Front End  - Full Rebuild Done</li>      
 <li>Project - Ready to Deploy Tomorrow</li>
 <li>Started on MongoDB</li>
+
+
+<h2>Day 86 Group Project Sequlizer CRUD, MVC ...App comming soon </h2>
+<li>Done</li>      
+<li>https://petseeker.herokuapp.com/</li>
