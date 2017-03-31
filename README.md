@@ -533,3 +533,8 @@ I've joined the #100DaysOfCode Challenge.
 <h2>Day 86 Group Project Sequlizer CRUD, MVC ...App comming soon </h2>
 <li>Done</li>      
 <li>https://petseeker.herokuapp.com/</li>
+
+<h2>Day 87 Group Project Sequlizer CRUD, MVC ...App comming soon </h2>
+<li>Well.....there is no perfect thing in the world</li>  
+<li>Found two major bugs with Sequlize and recursion,working now! </li>    
+<li>https://petseeker.herokuapp.com/</li>
