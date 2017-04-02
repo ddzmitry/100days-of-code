@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js" ></script>
+	<meta charset="UTF-8">
+	<title>Hand1</title>
+</head>
+<body>
+<div id="myDiv"></div>	
+	
+<script>
+//creating handlebars element
+var person = "<p> My name is {{name}} and I am {{age}} years old! </p>"
+
+//compile it with handlebars
+var compileData = Handlebars.compile(person);
+
+// add data
+var data = compileData({name:"Dzmitry" , age:24 });
+
+//render it on page
+document.getElementById('myDiv').innerHTML += data;
+
+//Simple !!!! 💩
+</script>
+</body>
+</html>

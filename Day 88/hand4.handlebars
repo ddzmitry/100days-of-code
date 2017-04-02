@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js" ></script>
+	<meta charset="UTF-8">
+	<title>Hand1</title>
+</head>
+<body>
+<input type="text" name ="data" placeholder="write your stuff here">
+
+
+<button id="button" method = "POST"> Submit</button>
+
+<div id="container">
+		
+</div>	
+	
+<script>
+
+var texttDataFromField = document.getElementsByName("data");
+document.addEventListener('keydown' , function(event) {
+
+			console.log(event.key)
+			console.log(texttDataFromField["0"].value);
+});
+	var stuff = [];
+
+
+
+	var btn = document.getElementById('button');
+
+	btn.addEventListener('click', function (e) {
+			console.log('hello')
+			stuff.push( {item :texttDataFromField["0"].value})
+
+			var data = ` <ul>
+				{{#each items}}
+					<li>{{item}}
+				{{/each}}
+			 </ul> `
+
+
+	// //compile it with handlebars
+var compileData = Handlebars.compile(data);		
+			
+var ToRenderdata = compileData({items:stuff });
+document.getElementById('container').innerHTML = '';
+document.getElementById('container').innerHTML += ToRenderdata;
+	} )
+
+
+
+
+// //creating handlebars element
+// var person = "<p> My name is {{name}} and I am {{age}} years old! </p>"
+
+// //compile it with handlebars
+// var compileData = Handlebars.compile(person);
+
+// // add data
+// var data = compileData({name:"Dzmitry" , age:24 });
+
+// //render it on page
+// document.getElementById('myDiv').innerHTML += data;
+
+// //Simple !!!! 💩
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js" ></script>
+	<meta charset="UTF-8">
+	<title>Hand2</title>
+</head>
+<body>
+<div id="myDiv"></div>	
+			
+<!--  We use tripple mustage to be able to recognize HTML tags as d=semantic tags! line 31! -->
+<!-- Creating our bloce of HTML code as handlebars -->
+<script id = "ListINfo" type = "text/x-handlebars-template">
+
+
+
+   <h2> My name is {{name}} and I love </h2>
+			<ul>
+				{{#each hobbies}}
+
+
+				<li>{{hobby}}
+
+				{{/each}}
+			</ul>
+
+	
+
+
+	{{{myInfo}}}
+
+{{makeALittleHelper "Dzmitry LinkedIn" "https://www.linkedin.com/in/ddzmitry/" "https://s-media-cache-ak0.pinimg.com/236x/21/75/f8/2175f8c734a566dbb151c2a0325cdc57.jpg" }}
+
+
+</script>
+
+<script>
+// we grab our data from handlebars script! ]
+//and use JS to use it to render
+		var info = document.getElementById("ListINfo").innerHTML;
+
+//creating Helper
+
+
+
+Handlebars.registerHelper("makeALittleHelper", function (text , link, image) {
+// to escape JS injection you wanna ake sure that it is a TEXT 
+
+	text = Handlebars.Utils.escapeExpression(text)
+	link = Handlebars.Utils.escapeExpression(link)
+	image = Handlebars.Utils.escapeExpression(image)
+
+//then we create element that we will be using ti render in 
+	var MyLink = `<img src="${image}" alt="Mokey" height="42" width="42"> 
+							<br>
+				    <a href="${link}" target="_blank">  ${text} </a> `
+	return new Handlebars.SafeString(MyLink)
+})
+
+
+//compile with handlebars
+		var template = Handlebars.compile(info);
+
+
+// add our data to template
+		var hobbiesData = template({
+			name: 'Dzmitry',
+			hobbies: [ {hobby:'💩'},  
+					   {hobby:'💤'},  
+					   {hobby:'🙊'},  
+					   {hobby:'👽'}
+					   ],
+			myInfo : '<b> I love coding !</b>'
+
+		});
+
+
+//grab our HTML tag and render
+document.getElementById('myDiv').innerHTML += hobbiesData;
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+

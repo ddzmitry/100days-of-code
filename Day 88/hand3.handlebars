@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js" ></script>
+	<meta charset="UTF-8">
+	<title>Hand1</title>
+</head>
+<body>
+<div id="myDiv"></div>	
+	
+<script id="templateData" type = "text/x-handlebars-template">
+
+		{{#radio 'size'}}
+		Small,
+		Medium,
+		Large
+		{{/radio}}
+
+		{{#areEqual 1 5}}
+		Numbers are Equal
+		{{else}}
+			Numbers are not Equal
+
+			{{/areEqual}} 
+
+			{{#if "happy"}}
+
+				<h2> 🙋</h2>
+				{{else}}
+				<h2> 😢</h2>
+
+
+			{{/if}}
+
+ </script>
+
+<script type = "text/javascript">
+// we grab our data from handlebars script! ]
+//and use JS to use it to render
+		var dataforTemplate = document.getElementById("templateData").innerHTML;
+
+		var template = Handlebars.compile(dataforTemplate);
+
+Handlebars.registerHelper('radio' , function (name, options) {
+//return data 	
+	var radiosList = options.fn();
+
+	//split based of new lines and trinm white spaces
+
+	radiosList = radiosList.trim().split("\n");
+	console.log(radiosList)
+	var output = ""
+
+	for (var val in radiosList) {
+		var item = radiosList[val].trim();
+		output += `<input type="radio" name="${name}" value="${item}"> ${item} <br/>`
+	}
+
+	return output
+})
+
+// handlebars equlas helper
+Handlebars.registerHelper('areEqual' ,function(number1 , number2 , option){
+
+	if(number1 === number2){
+		return option.fn(this);
+	} else {
+		//uses else value
+		return option.inverse(this);
+	}
+});
+
+// is happy 
+// IF STATEMENT
+Handlebars.registerHelper("if", function (data, options){
+
+	if( data === "happy"){
+		return options.fn(this)
+	} else {
+		return options.inverse(this)
+	}
+})
+
+var templateNodata = template({});
+
+document.getElementById('myDiv').innerHTML += templateNodata
+
+
+
+</script>
+</body>
+</html>

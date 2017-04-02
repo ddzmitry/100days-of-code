@@ -538,3 +538,8 @@ I've joined the #100DaysOfCode Challenge.
 <li>Well.....there is no perfect thing in the world</li>  
 <li>Found two major bugs with Sequlize and recursion,working now! </li>    
 <li>https://petseeker.herokuapp.com/</li>
+
+
+<h2>Day 88 Back on track with daily report </h2>
+<li>Generated lesson on handebars </li>  
+<li> Working on Handlebar.helpers and more </li>    
