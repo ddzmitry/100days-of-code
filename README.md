@@ -543,3 +543,8 @@ I've joined the #100DaysOfCode Challenge.
 <h2>Day 88 Back on track with daily report </h2>
 <li>Generated lesson on handebars </li>  
 <li> Working on Handlebar.helpers and more </li>    
+
+
+<h2>Day 89 -90 Working on fundamentals of MongoDB and Working on lessonPlans </h2>
+<li>MongoDB CRUD</li>  
+<li>Constructors, Node.js repeat content (Lessons)</li>    
