@@ -552,3 +552,8 @@ I've joined the #100DaysOfCode Challenge.
 <h2>Day 91  Took some time to learn PHP </h2>
 <li>Cool language great fo FORMS and Interaction with mySQL</li>  
 <li>Looks like ES6 JS 😇</li> 
+
+<h2>Day 92  DataScraping with MongoDB </h2>
+<li>Learned Cheerio</li>  
+<li>Repeat request</li> 
+<li>MongoJs</li> 
