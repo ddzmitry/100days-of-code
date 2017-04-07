@@ -557,3 +557,7 @@ I've joined the #100DaysOfCode Challenge.
 <li>Learned Cheerio</li>  
 <li>Repeat request</li> 
 <li>MongoJs</li> 
+
+<h2>Day 93 Learning more about react </h2>
+<li>Creating Modules</li>  
+<li>Learning About Life Cycle</li> 
