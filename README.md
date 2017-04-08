@@ -561,3 +561,8 @@ I've joined the #100DaysOfCode Challenge.
 <h2>Day 93 Learning more about react </h2>
 <li>Creating Modules</li>  
 <li>Learning About Life Cycle</li> 
+
+<h2>Day 93 Learning more about react </h2>
+<li>Creating Modules</li>  
+<li>Learning About Life Cycle</li> 
+<li>Learning more about Props</li> 
