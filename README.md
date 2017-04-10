@@ -569,3 +569,10 @@ I've joined the #100DaysOfCode Challenge.
 
 <h2>Day 95 Mongoose </h2>
 <li>Scraping pages</li>  
+
+<h2>Day 96 Working on FullStack app using Express, Mongo, Mongoose, handlebars </h2>
+<li>Scraping pages</li>  
+<li>Get certain data</li>
+<li>Push data to collections</li>
+<li>Use controllers to apply CRUD methods</li>
+<li>Working on backend so far! </li>
