@@ -576,3 +576,7 @@ I've joined the #100DaysOfCode Challenge.
 <li>Push data to collections</li>
 <li>Use controllers to apply CRUD methods</li>
 <li>Working on backend so far! </li>
+
+
+<h2>Day 96-98 Working on FullStack app using Express, Mongo, Mongoose, handlebars </h2>
+<li>Working on the app still!</li>  
